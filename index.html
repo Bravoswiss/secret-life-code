@@ -9,20 +9,19 @@
 :root{--gold:#C9A84C;--gold-light:#E8D5A3;--gold-dim:#8B6E32;}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html,body{width:100%;min-height:100vh;background:#0F0C07;font-family:'Noto Serif SC',serif;}
-.bg-stars{position:fixed;inset:0;z-index:0;pointer-events:none;
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:radial-gradient(ellipse at 50% 0%,#2A1F0A 0%,#0F0C07 60%);}
-.bg-stars::before{content:'';position:absolute;inset:0;
-  background-image:
-    radial-gradient(1px 1px at 15% 20%,rgba(201,168,76,.6) 0%,transparent 100%),
-    radial-gradient(1px 1px at 72% 8%,rgba(201,168,76,.5) 0%,transparent 100%),
-    radial-gradient(1.5px 1.5px at 85% 25%,rgba(201,168,76,.7) 0%,transparent 100%),
-    radial-gradient(1px 1px at 38% 35%,rgba(201,168,76,.4) 0%,transparent 100%),
-    radial-gradient(1px 1px at 55% 55%,rgba(201,168,76,.3) 0%,transparent 100%),
-    radial-gradient(1px 1px at 10% 65%,rgba(201,168,76,.4) 0%,transparent 100%),
-    radial-gradient(1px 1px at 92% 70%,rgba(201,168,76,.5) 0%,transparent 100%),
-    radial-gradient(1px 1px at 28% 80%,rgba(201,168,76,.3) 0%,transparent 100%),
-    radial-gradient(1px 1px at 60% 90%,rgba(201,168,76,.4) 0%,transparent 100%);}
-.screen{display:none;position:relative;z-index:1;min-height:100vh;padding:0 0 60px;}
+.bg::before{content:'';position:absolute;inset:0;background-image:
+  radial-gradient(1px 1px at 15% 20%,rgba(201,168,76,.6) 0%,transparent 100%),
+  radial-gradient(1.5px 1.5px at 72% 8%,rgba(201,168,76,.5) 0%,transparent 100%),
+  radial-gradient(1px 1px at 38% 35%,rgba(201,168,76,.4) 0%,transparent 100%),
+  radial-gradient(1.5px 1.5px at 85% 25%,rgba(201,168,76,.7) 0%,transparent 100%),
+  radial-gradient(1px 1px at 55% 55%,rgba(201,168,76,.3) 0%,transparent 100%),
+  radial-gradient(1px 1px at 10% 65%,rgba(201,168,76,.4) 0%,transparent 100%),
+  radial-gradient(1px 1px at 92% 70%,rgba(201,168,76,.5) 0%,transparent 100%),
+  radial-gradient(1px 1px at 28% 80%,rgba(201,168,76,.3) 0%,transparent 100%),
+  radial-gradient(1px 1px at 60% 90%,rgba(201,168,76,.4) 0%,transparent 100%);}
+.screen{display:none;position:relative;z-index:1;min-height:100vh;padding:0 0 70px;}
 .screen.active{display:block;}
 
 /* INTRO */
@@ -32,156 +31,213 @@ html,body{width:100%;min-height:100vh;background:#0F0C07;font-family:'Noto Serif
   display:flex;align-items:center;justify-content:center;margin-bottom:28px;position:relative;}
 .logo-ring::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid rgba(201,168,76,.15);}
 .logo-ring::after{content:'';position:absolute;inset:-16px;border-radius:50%;border:1px dashed rgba(201,168,76,.08);}
-.logo-num{font-family:'Playfair Display',serif;font-size:52px;color:var(--gold);font-style:italic;}
-.intro-title{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-light);text-align:center;line-height:1.3;margin-bottom:10px;}
-.intro-sub{font-size:13px;color:rgba(201,168,76,.55);letter-spacing:.12em;text-align:center;margin-bottom:20px;}
-.divider-orn{color:rgba(201,168,76,.3);font-size:18px;letter-spacing:8px;margin:8px 0 20px;}
-.intro-desc{font-size:14px;color:rgba(242,234,216,.6);text-align:center;line-height:1.9;max-width:300px;margin-bottom:48px;}
-.btn-start{width:220px;height:52px;border-radius:26px;
-  background:linear-gradient(135deg,#C9A84C,#8B6E32);border:none;cursor:pointer;
-  font-family:'Noto Serif SC',serif;font-size:16px;color:#1A1208;font-weight:600;
+.logo-n{font-family:'Playfair Display',serif;font-size:52px;color:var(--gold);font-style:italic;}
+.intro-title{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-light);text-align:center;line-height:1.3;margin-bottom:8px;}
+.intro-sub{font-size:13px;color:rgba(201,168,76,.55);letter-spacing:.12em;text-align:center;margin-bottom:16px;}
+.dorn{color:rgba(201,168,76,.3);font-size:18px;letter-spacing:8px;margin:4px 0 16px;}
+.intro-desc{font-size:14px;color:rgba(242,234,216,.6);text-align:center;line-height:1.9;max-width:300px;margin-bottom:44px;}
+.btn-start{width:220px;height:52px;border-radius:26px;background:linear-gradient(135deg,#C9A84C,#8B6E32);
+  border:none;cursor:pointer;font-family:'Noto Serif SC',serif;font-size:16px;color:#1A1208;font-weight:600;
   letter-spacing:.1em;box-shadow:0 4px 24px rgba(201,168,76,.25);transition:opacity .2s,transform .15s;}
 .btn-start:active{opacity:.85;transform:scale(.97);}
 
 /* INPUT */
 #s1{padding:50px 28px 80px;animation:slideUp .5s ease;}
-.page-header{text-align:center;margin-bottom:36px;}
-.page-header h2{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold-light);margin-bottom:6px;}
-.page-header p{font-size:12px;color:rgba(201,168,76,.45);letter-spacing:.1em;}
-.input-label{font-size:12px;color:rgba(201,168,76,.6);letter-spacing:.1em;margin-bottom:10px;display:block;}
-.input-group{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-bottom:28px;}
-.field input,.name-field input{width:100%;height:52px;background:rgba(201,168,76,.07);
+.ph{text-align:center;margin-bottom:36px;}
+.ph h2{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold-light);margin-bottom:6px;}
+.ph p{font-size:12px;color:rgba(201,168,76,.45);letter-spacing:.1em;}
+.ilabel{font-size:12px;color:rgba(201,168,76,.6);letter-spacing:.1em;margin-bottom:10px;display:block;}
+.igroup{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-bottom:28px;}
+.field input,.nfield input{width:100%;height:52px;background:rgba(201,168,76,.07);
   border:1px solid rgba(201,168,76,.25);border-radius:8px;color:var(--gold-light);
   font-family:'Noto Serif SC',serif;font-size:17px;text-align:center;outline:none;
-  transition:border-color .2s;-webkit-appearance:none;appearance:none;}
-.field input:focus,.name-field input:focus{border-color:rgba(201,168,76,.6);}
-.field input::placeholder,.name-field input::placeholder{color:rgba(201,168,76,.25);font-size:14px;}
-.field-hint{text-align:center;font-size:11px;color:rgba(201,168,76,.35);margin-top:5px;}
-.name-field{margin-bottom:28px;}
-.name-field input{padding:0 16px;}
-.ornament-line{display:flex;align-items:center;gap:12px;margin:32px 0 28px;}
-.ornament-line::before,.ornament-line::after{content:'';flex:1;height:1px;
-  background:linear-gradient(to right,transparent,rgba(201,168,76,.3),transparent);}
-.ornament-line span{font-size:14px;color:rgba(201,168,76,.4);}
-.btn-calc{width:100%;height:54px;border-radius:27px;
-  background:linear-gradient(135deg,#C9A84C,#8B6E32);border:none;cursor:pointer;
-  font-family:'Noto Serif SC',serif;font-size:17px;color:#1A1208;font-weight:600;
+  transition:border-color .2s;-webkit-appearance:none;}
+.field input:focus,.nfield input:focus{border-color:rgba(201,168,76,.6);}
+.field input::placeholder,.nfield input::placeholder{color:rgba(201,168,76,.25);font-size:14px;}
+.fhint{text-align:center;font-size:11px;color:rgba(201,168,76,.35);margin-top:5px;}
+.nfield{margin-bottom:28px;}
+.nfield input{padding:0 16px;}
+.oln{display:flex;align-items:center;gap:12px;margin:32px 0 28px;}
+.oln::before,.oln::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.3),transparent);}
+.oln span{font-size:14px;color:rgba(201,168,76,.4);}
+.btn-calc{width:100%;height:54px;border-radius:27px;background:linear-gradient(135deg,#C9A84C,#8B6E32);
+  border:none;cursor:pointer;font-family:'Noto Serif SC',serif;font-size:17px;color:#1A1208;font-weight:600;
   letter-spacing:.12em;box-shadow:0 4px 24px rgba(201,168,76,.3);transition:opacity .2s,transform .15s;}
 .btn-calc:active{opacity:.85;transform:scale(.98);}
 
 /* RESULT */
-#s2{padding:40px 20px 80px;animation:slideUp .5s ease;}
-.result-hero{text-align:center;margin-bottom:32px;}
-.result-name{font-size:15px;color:rgba(201,168,76,.6);letter-spacing:.12em;margin-bottom:16px;}
-.num-showcase{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:18px;}
-.num-bubble{width:72px;height:72px;border-radius:50%;background:rgba(201,168,76,.1);
-  border:1px solid rgba(201,168,76,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;}
-.num-bubble.main{width:100px;height:100px;
-  background:radial-gradient(circle at 40% 35%,rgba(201,168,76,.22),rgba(201,168,76,.06));
-  border:1.5px solid var(--gold);box-shadow:0 0 30px rgba(201,168,76,.15),inset 0 0 20px rgba(201,168,76,.05);}
-.num-big{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold);}
-.num-bubble.main .num-big{font-size:52px;}
-.num-tag{font-size:9px;color:rgba(201,168,76,.5);letter-spacing:.05em;margin-top:1px;}
-.arrow-div{font-size:18px;color:rgba(201,168,76,.3);}
-.result-title{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold-light);margin-bottom:6px;}
-.result-keyword{font-size:12px;color:rgba(201,168,76,.5);letter-spacing:.2em;}
+#s2{padding:36px 20px 80px;animation:slideUp .5s ease;}
+.r-hero{text-align:center;margin-bottom:28px;}
+.r-name{font-size:14px;color:rgba(201,168,76,.6);letter-spacing:.12em;margin-bottom:16px;}
+.num-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:16px;}
+.nb{width:64px;height:64px;border-radius:50%;background:rgba(201,168,76,.1);
+  border:1px solid rgba(201,168,76,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.nb.main{width:96px;height:96px;background:radial-gradient(circle at 40% 35%,rgba(201,168,76,.22),rgba(201,168,76,.06));
+  border:1.5px solid var(--gold);box-shadow:0 0 28px rgba(201,168,76,.15),inset 0 0 18px rgba(201,168,76,.05);}
+.nb-n{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);}
+.nb.main .nb-n{font-size:48px;}
+.nb-t{font-size:9px;color:rgba(201,168,76,.5);letter-spacing:.04em;margin-top:1px;}
+.arr{font-size:16px;color:rgba(201,168,76,.3);}
+.r-title{font-family:'Playfair Display',serif;font-size:23px;color:var(--gold-light);margin-bottom:5px;}
+.r-kw{font-size:12px;color:rgba(201,168,76,.5);letter-spacing:.18em;}
 
-/* CARDS */
-.card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.18);border-radius:12px;padding:20px;margin-bottom:14px;}
-.card-title{font-size:11px;color:var(--gold);letter-spacing:.18em;margin-bottom:10px;font-weight:600;}
-.card-text{font-size:14px;color:rgba(242,234,216,.78);line-height:1.9;}
-.card-text strong{color:var(--gold-light);font-weight:600;}
+/* UNIVERSAL CARDS */
+.card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.18);border-radius:12px;padding:18px;margin-bottom:12px;}
+.ct{font-size:11px;color:var(--gold);letter-spacing:.18em;margin-bottom:10px;font-weight:600;}
+.cb{font-size:14px;color:rgba(242,234,216,.78);line-height:1.9;}
+.cb strong{color:var(--gold-light);font-weight:600;}
+.cb em{color:rgba(201,168,76,.75);font-style:normal;font-weight:600;}
 
-.dual-card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.18);border-radius:12px;padding:20px;margin-bottom:14px;}
-.dual-card-title{font-size:11px;color:var(--gold);letter-spacing:.18em;margin-bottom:14px;font-weight:600;}
-.dual-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.dual-col-label{font-size:10px;color:rgba(201,168,76,.5);letter-spacing:.1em;margin-bottom:6px;font-weight:600;}
-.dual-col-text{font-size:13px;color:rgba(242,234,216,.72);line-height:1.85;}
+/* DUAL */
+.dc{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.18);border-radius:12px;padding:18px;margin-bottom:12px;}
+.dct{font-size:11px;color:var(--gold);letter-spacing:.18em;margin-bottom:12px;font-weight:600;}
+.dcols{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.dcl{font-size:10px;color:rgba(201,168,76,.5);letter-spacing:.1em;margin-bottom:5px;font-weight:600;}
+.dct2{font-size:13px;color:rgba(242,234,216,.72);line-height:1.85;}
 
-.tags-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;}
+/* TALENT DNA — the unique section */
+.dna-card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.22);border-radius:12px;padding:18px;margin-bottom:12px;}
+.dna-title{font-size:11px;color:var(--gold);letter-spacing:.18em;margin-bottom:14px;font-weight:600;}
+.dna-formula{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
+.dna-chip{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:56px;height:56px;border-radius:50%;border:1px solid rgba(201,168,76,.4);
+  background:rgba(201,168,76,.1);}
+.dna-chip.big{width:72px;height:72px;border:1.5px solid var(--gold);background:rgba(201,168,76,.15);}
+.dna-chip-n{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);}
+.dna-chip.big .dna-chip-n{font-size:28px;}
+.dna-chip-t{font-size:9px;color:rgba(201,168,76,.5);margin-top:1px;}
+.dna-plus{font-size:18px;color:rgba(201,168,76,.3);}
+.dna-eq{font-size:18px;color:rgba(201,168,76,.4);}
+.dna-row{margin-bottom:14px;}
+.dna-row:last-child{margin-bottom:0;}
+.dna-num-label{font-size:11px;color:var(--gold);letter-spacing:.1em;margin-bottom:5px;
+  display:flex;align-items:center;gap:6px;}
+.dna-num-badge{width:20px;height:20px;border-radius:50%;background:rgba(201,168,76,.15);
+  border:1px solid rgba(201,168,76,.4);display:inline-flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:11px;color:var(--gold);}
+.dna-text{font-size:13px;color:rgba(242,234,216,.75);line-height:1.85;}
+.dna-text strong{color:var(--gold-light);}
+.dna-combo-box{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);
+  border-radius:8px;padding:12px 14px;margin-top:10px;}
+.dna-combo-title{font-size:10px;color:rgba(201,168,76,.6);letter-spacing:.12em;margin-bottom:6px;font-weight:600;}
+.dna-combo-text{font-size:13px;color:rgba(242,234,216,.78);line-height:1.85;}
+.dna-combo-text strong{color:var(--gold-light);}
+
+/* GRID — nine palace */
+.grid-card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.22);border-radius:12px;padding:18px;margin-bottom:12px;}
+.grid-title{font-size:11px;color:var(--gold);letter-spacing:.18em;margin-bottom:14px;font-weight:600;}
+.grid-layout{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;}
+.palace{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;flex-shrink:0;}
+.pc{width:58px;height:52px;border:1px solid rgba(201,168,76,.2);border-radius:6px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:rgba(201,168,76,.04);position:relative;}
+.pc.active{background:rgba(201,168,76,.14);border-color:rgba(201,168,76,.45);}
+.pc.line-active{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.3);}
+.pc-pos{position:absolute;top:3px;left:5px;font-size:9px;color:rgba(201,168,76,.3);}
+.pc-dots{font-size:13px;color:var(--gold);font-weight:600;line-height:1;}
+.pc-count{font-size:9px;color:rgba(201,168,76,.4);margin-top:2px;}
+.grid-lines{flex:1;min-width:160px;}
+.line-item{margin-bottom:10px;}
+.line-item:last-child{margin-bottom:0;}
+.line-header{display:flex;align-items:center;gap:6px;margin-bottom:4px;}
+.line-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;}
+.line-has{background:rgba(201,168,76,.2);border:1px solid rgba(201,168,76,.4);color:var(--gold-light);}
+.line-missing{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:rgba(242,234,216,.35);}
+.line-name{font-size:12px;color:rgba(201,168,76,.7);font-weight:600;}
+.line-desc{font-size:12px;color:rgba(242,234,216,.6);line-height:1.7;}
+.line-power{font-size:11px;color:rgba(201,168,76,.5);margin-top:3px;font-style:italic;}
+.missing-note{margin-top:12px;padding:10px 12px;background:rgba(201,168,76,.06);
+  border-left:2px solid rgba(201,168,76,.3);border-radius:0 6px 6px 0;}
+.missing-note-title{font-size:10px;color:rgba(201,168,76,.5);letter-spacing:.1em;margin-bottom:4px;}
+.missing-note-text{font-size:12px;color:rgba(242,234,216,.6);line-height:1.7;}
+
+/* TAGS */
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px;}
 .tag{padding:4px 12px;border-radius:20px;font-size:11px;border:1px solid rgba(201,168,76,.3);
   color:rgba(201,168,76,.8);background:rgba(201,168,76,.08);}
 
-.advice-list{list-style:none;}
-.advice-list li{padding:13px 0;border-bottom:1px solid rgba(201,168,76,.1);
-  font-size:14px;color:rgba(242,234,216,.72);line-height:1.8;display:flex;gap:12px;}
-.advice-list li:last-child{border-bottom:none;}
-.advice-num{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold-dim);flex-shrink:0;padding-top:2px;}
-.advice-body strong{display:block;color:var(--gold-light);font-size:14px;margin-bottom:4px;}
-.advice-body span{font-size:13px;color:rgba(242,234,216,.62);}
+/* ADVICE */
+.adv-list{list-style:none;}
+.adv-list li{padding:12px 0;border-bottom:1px solid rgba(201,168,76,.1);
+  display:flex;gap:12px;align-items:flex-start;}
+.adv-list li:last-child{border-bottom:none;}
+.adv-num{font-family:'Playfair Display',serif;font-size:15px;color:var(--gold-dim);flex-shrink:0;padding-top:2px;}
+.adv-body strong{display:block;font-size:13px;color:var(--gold-light);margin-bottom:3px;}
+.adv-body span{font-size:13px;color:rgba(242,234,216,.62);line-height:1.75;}
 
+/* COMPAT */
 .compat-label{font-size:10px;color:rgba(201,168,76,.4);letter-spacing:.1em;margin-top:12px;margin-bottom:6px;}
-.compat-row{display:flex;gap:8px;flex-wrap:wrap;}
-.compat-best{padding:5px 14px;border-radius:20px;font-size:12px;background:rgba(201,168,76,.15);
+.compat-row{display:flex;gap:7px;flex-wrap:wrap;}
+.compat-best{padding:4px 12px;border-radius:20px;font-size:11px;background:rgba(201,168,76,.15);
   border:1px solid rgba(201,168,76,.4);color:var(--gold-light);}
-.compat-good{padding:5px 14px;border-radius:20px;font-size:12px;background:rgba(201,168,76,.07);
+.compat-good{padding:4px 12px;border-radius:20px;font-size:11px;background:rgba(201,168,76,.07);
   border:1px solid rgba(201,168,76,.2);color:rgba(201,168,76,.7);}
 
-.section-label{font-size:11px;color:rgba(201,168,76,.4);letter-spacing:.18em;text-align:center;margin:28px 0 16px;}
+.sec-label{font-size:11px;color:rgba(201,168,76,.4);letter-spacing:.18em;text-align:center;margin:24px 0 14px;}
 
 /* SHARE */
-.share-card{border-radius:16px;overflow:hidden;position:relative;
+.share-card{border-radius:14px;position:relative;
   background:linear-gradient(160deg,#1A1208 0%,#0F0C07 50%,#1A1208 100%);
-  border:1px solid rgba(201,168,76,.3);padding:32px 24px 28px;}
+  border:1px solid rgba(201,168,76,.3);padding:28px 22px 24px;overflow:hidden;}
 .share-card::before{content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.08) 0%,transparent 60%);pointer-events:none;}
-.sc{position:absolute;width:24px;height:24px;border-color:rgba(201,168,76,.4);border-style:solid;}
-.sc.tl{top:12px;left:12px;border-width:1px 0 0 1px;}
-.sc.tr{top:12px;right:12px;border-width:1px 1px 0 0;}
-.sc.bl{bottom:12px;left:12px;border-width:0 0 1px 1px;}
-.sc.br{bottom:12px;right:12px;border-width:0 1px 1px 0;}
-.share-app{font-size:10px;color:rgba(201,168,76,.4);letter-spacing:.2em;text-align:center;margin-bottom:14px;}
-.share-n{font-family:'Playfair Display',serif;font-size:72px;color:var(--gold);line-height:1;text-align:center;}
-.share-nl{font-size:11px;color:rgba(201,168,76,.55);letter-spacing:.15em;text-align:center;margin-bottom:8px;}
-.share-name{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold-light);text-align:center;margin-bottom:4px;}
-.share-kw{font-size:12px;color:rgba(201,168,76,.55);letter-spacing:.2em;text-align:center;}
-.sdiv{height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.3),transparent);margin:16px 0;}
-.share-bubbles{display:flex;justify-content:center;gap:14px;margin:12px 0;}
-.sb{width:46px;height:46px;border-radius:50%;border:1px solid rgba(201,168,76,.35);
+.sc{position:absolute;width:20px;height:20px;border-color:rgba(201,168,76,.4);border-style:solid;}
+.sc.tl{top:10px;left:10px;border-width:1px 0 0 1px;}
+.sc.tr{top:10px;right:10px;border-width:1px 1px 0 0;}
+.sc.bl{bottom:10px;left:10px;border-width:0 0 1px 1px;}
+.sc.br{bottom:10px;right:10px;border-width:0 1px 1px 0;}
+.sapp{font-size:10px;color:rgba(201,168,76,.4);letter-spacing:.2em;text-align:center;margin-bottom:12px;}
+.snum{font-family:'Playfair Display',serif;font-size:68px;color:var(--gold);line-height:1;text-align:center;}
+.snl{font-size:10px;color:rgba(201,168,76,.5);letter-spacing:.15em;text-align:center;margin-bottom:7px;}
+.sname{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold-light);text-align:center;margin-bottom:3px;}
+.skw{font-size:11px;color:rgba(201,168,76,.5);letter-spacing:.18em;text-align:center;}
+.sdiv{height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.3),transparent);margin:14px 0;}
+.sbubs{display:flex;justify-content:center;gap:12px;margin:10px 0;}
+.sb{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,168,76,.35);
   display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(201,168,76,.07);}
-.sb-n{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold);line-height:1;}
+.sb-n{font-family:'Playfair Display',serif;font-size:17px;color:var(--gold);line-height:1;}
 .sb-t{font-size:8px;color:rgba(201,168,76,.4);margin-top:1px;}
-.share-quote{font-size:12px;color:rgba(201,168,76,.65);text-align:center;line-height:1.85;font-style:italic;padding:0 10px;margin-bottom:14px;}
-.share-footer{text-align:center;font-size:10px;color:rgba(201,168,76,.3);letter-spacing:.1em;}
-.btn-share{width:100%;height:50px;border-radius:25px;margin-top:14px;
+.squote{font-size:12px;color:rgba(201,168,76,.62);text-align:center;line-height:1.85;font-style:italic;padding:0 8px;margin-bottom:12px;}
+.sfooter{text-align:center;font-size:10px;color:rgba(201,168,76,.3);letter-spacing:.1em;}
+.btn-share{width:100%;height:50px;border-radius:25px;margin-top:12px;
   background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.4);
-  color:var(--gold-light);font-family:'Noto Serif SC',serif;font-size:15px;
-  cursor:pointer;letter-spacing:.08em;transition:background .2s;}
+  color:var(--gold-light);font-family:'Noto Serif SC',serif;font-size:15px;cursor:pointer;letter-spacing:.08em;}
 .btn-share:active{background:rgba(201,168,76,.2);}
 .btn-again{width:100%;height:44px;border-radius:22px;margin-top:10px;
   background:transparent;border:1px solid rgba(201,168,76,.2);
   color:rgba(201,168,76,.5);font-family:'Noto Serif SC',serif;font-size:14px;cursor:pointer;}
+
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);
   background:rgba(201,168,76,.9);color:#1A1208;padding:10px 22px;border-radius:20px;
   font-size:14px;font-weight:600;z-index:999;opacity:0;pointer-events:none;transition:all .3s;white-space:nowrap;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
-<div class="bg-stars"></div>
+<div class="bg"></div>
 
 <div class="screen active" id="s0">
-  <div class="logo-ring"><span class="logo-num">∞</span></div>
+  <div class="logo-ring"><span class="logo-n">∞</span></div>
   <div class="intro-title">生命数字密码</div>
   <div class="intro-sub">NUMEROLOGY · 命运解码</div>
-  <div class="divider-orn">✦ ✦ ✦</div>
+  <div class="dorn">✦ ✦ ✦</div>
   <div class="intro-desc">每个人的生日，都藏着一段独特的宇宙密码。<br>数字揭示你的天赋、挑战与人生使命，<br>帮你看清自己，读懂他人。</div>
   <button class="btn-start" onclick="go(1)">开始解码 →</button>
 </div>
 
 <div class="screen" id="s1">
-  <div class="page-header"><h2>输入你的生日</h2><p>请使用公历（阳历）日期</p></div>
-  <span class="input-label">✦ 出生年月日</span>
-  <div class="input-group">
-    <div class="field"><input type="number" id="year" placeholder="年" inputmode="numeric"><div class="field-hint">年</div></div>
-    <div class="field"><input type="number" id="month" placeholder="月" min="1" max="12" inputmode="numeric"><div class="field-hint">月</div></div>
-    <div class="field"><input type="number" id="day" placeholder="日" min="1" max="31" inputmode="numeric"><div class="field-hint">日</div></div>
+  <div class="ph"><h2>输入你的生日</h2><p>请使用公历（阳历）日期</p></div>
+  <span class="ilabel">✦ 出生年月日</span>
+  <div class="igroup">
+    <div class="field"><input type="number" id="year" placeholder="年" inputmode="numeric"><div class="fhint">年</div></div>
+    <div class="field"><input type="number" id="month" placeholder="月" min="1" max="12" inputmode="numeric"><div class="fhint">月</div></div>
+    <div class="field"><input type="number" id="day" placeholder="日" min="1" max="31" inputmode="numeric"><div class="fhint">日</div></div>
   </div>
-  <span class="input-label">✦ 你的姓名（选填）</span>
-  <div class="name-field"><input type="text" id="uname" placeholder="输入姓名，让解读更有温度"></div>
-  <div class="ornament-line"><span>✦</span></div>
+  <span class="ilabel">✦ 你的姓名（选填）</span>
+  <div class="nfield"><input type="text" id="uname" placeholder="输入姓名，让解读更有温度"></div>
+  <div class="oln"><span>✦</span></div>
   <button class="btn-calc" onclick="calculate()">解码我的命运数字</button>
 </div>
 
@@ -189,109 +245,246 @@ html,body{width:100%;min-height:100vh;background:#0F0C07;font-family:'Noto Serif
 <div class="toast" id="toast"></div>
 
 <script>
-const D={
-1:{name:"独立·领袖",keyword:"开创 / 自我 / 太阳",tags:["天生开拓者","领袖气质","独立自主","勇于创新"],
-core:`你是数字1——太阳的能量。独立、开创、强烈的自我意志是你最鲜明的标记。你天生走在前面，对新领域有着近乎本能的开拓冲动，不需要别人推着走，自己就是那个发动引擎的人。<br><br>你的内心有一种执念：<strong>事情如果要做，就要以最好的方式做到。</strong>这种驱动力让你在竞争中往往脱颖而出，但也容易让你在关系和合作中显得固执、难以妥协。`,
-gift:"领导力天然，不是学来的，而是骨子里带来的。你能在混乱中看清方向，在他人犹豫时果断决策。开创性强，最适合做第一个吃螃蟹的人——无论是事业还是人生选择。",
-shadow:"固执是你最大的绊脚石。你相信自己的判断，有时甚至到了听不进他人建议的程度。当你孤注一掷时，旁边那些声音未必是干扰，有时是你看不见的风险预警。",
-relation:`在关系中你是主导者，充满活力与魅力。伴侣或朋友身边有你，往往感到很有安全感，但有时也会感到窒息——因为你的"我来安排"有时越过了界。<br><br><strong>最适合与拥有独立性、能欣赏你能力的人相处。</strong>你需要的不是崇拜者，而是能与你并肩的人。`,
-career:"创业、领导、先锋型角色是你的主场。销售、创业、管理、军事、体育竞技——任何需要第一名的领域，都是你的舞台。你在需要独立决策、开拓新局的岗位上如鱼得水。",
-wealth:"你的财富来自主动出击而非守成。敢于冒险是你的优势，但需防范因过于自信而忽视风险。财运高峰通常在你敢于独立决策、走出舒适区之后出现。",
-cb:["3","5","7"],cg:["2","9"],
-advice:[{t:"练习倾听，而非等待说话的机会",b:"你的直觉通常对，但他人的视角能让你避开盲区。每天至少一次，先听完再表达。"},{t:"允许自己依赖他人",b:"独立是美德，但孤立是消耗。允许团队承担，不是软弱，而是更聪明的力量分配。"},{t:"选定方向，深耕到底",b:"你有开创力，但容易在一件事成功后想去开创下一件。选一个核心领域，做到无可替代。"},{t:"把「必须赢」换成「想要成长」",b:"当你把竞争心转化为成长心，你的能量会更持久，关系也会更顺畅。"}],
-quote:"世界需要开拓者，而你生来就是。"},
-
-2:{name:"合作·感知",keyword:"关系 / 直觉 / 月亮",tags:["共情力超强","天生协调者","细腻敏感","直觉精准"],
-core:`你是数字2——月亮的能量。情感细腻，直觉灵敏，天生能感知他人的需求与情绪，常常在对方开口之前，你已经知道他们想要什么。<br><br>你是团队中最不可或缺的粘合剂。不是最显眼的那个，却往往是最被需要的那个。<strong>你的力量不在于锋芒，而在于深度。</strong>`,
-gift:"沟通与倾听能力出类拔萃，能让对方感到真正被理解。你是天生的调解者，在冲突中能找到双方都能接受的出口。细节观察力极强，能察觉到别人忽视的微妙信号。",
-shadow:"你最大的挑战是对他人认可的依赖。当外界反馈不佳时，你的内心会比别人震荡更大。优柔寡断也是你的课题——因为你总能看见每一面，所以很难果断选择。",
-relation:`你在关系中是最用心、最细腻的那一个。你记得对方说过的细节，感知他们的情绪变化，主动付出。<br><br>但要注意：<strong>过度付出而不表达需求，最终会积累成无声的委屈。</strong>你值得被同样细腻地对待——让对方知道你也有需要，不是负担，而是真正亲密的开始。`,
-career:"心理咨询、人力资源、外交、设计、教育、医疗护理——任何需要细腻感知与沟通协调的领域，你都能做到极致。你是任何团队中情绪智商最高的那个人。",
-wealth:"你的财富往往通过合作与关系网络而来，而非单打独斗。与他人建立真诚的连接，是你最大的隐性资产。避免因过于谦让而低估自己的价值。",
-cb:["4","8","6"],cg:["1","3"],
-advice:[{t:"建立内在稳定感",b:"你的安全感不该来自他人的态度。每天给自己五分钟，问：今天我为自己做了什么？"},{t:"学会说「不」",b:"你的边界是对自己的尊重，也是对关系的保护。拒绝不会让你失去爱，反而让人更珍视你。"},{t:"练习独立做决定",b:"哪怕是小事——今天吃什么、先做哪个任务——都主动决定，而不是问别人。这会积累真实的自我信心。"},{t:"表达你的需求",b:"你擅长满足他人，但常常忘记告诉别人你需要什么。说出来，不是脆弱，是真正的连接。"}],
-quote:"真正的力量，是在感受一切的同时，依然站稳自己。"},
-
-3:{name:"创意·表达",keyword:"创造 / 社交 / 木星",tags:["创意无限","口才出众","社交达人","艺术天赋"],
-core:`你是数字3——木星的能量。充满创意与表达欲，思维跳跃，语言有感染力，走进任何房间都能点亮气氛。你不只是在表达，你是在<strong>创造体验</strong>——让别人因为你的存在而感到更生动。<br><br>你内心有一个永不停歇的创意引擎，想法比时间多，灵感比执行多。`,
-gift:"创造力丰富、口才出众、社交能量强。你能在短时间内与陌生人建立连接，把复杂的想法用生动有趣的方式传递出去。艺术、写作、演讲——你在任何表达场域都能找到自己的节奏。",
-shadow:"三分钟热度和注意力分散是你的老朋友。你开始的项目比完成的多三倍。情绪化时容易言过其实，事后又懊悔。深度有时被你的广度所掩盖。",
-relation:`你让关系充满趣味与惊喜，是伴侣和朋友们的快乐源泉。但深度关系需要的不只是热情，还需要稳定与耐心——这正是你需要刻意培养的。<br><br><strong>你最适合与同样有创意、但比你更有执行力的人相处。</strong>他们让你的创意落地，你让他们的生活更有色彩。`,
-career:"艺术创作、传媒、写作、公关、营销、教育、演讲——任何让你表达自我、感染他人的舞台都是你的主场。你不适合重复性强、需要大量文书的工作。",
-wealth:"你的财富与创意和人脉密切相关。当你把创意专注到一个方向并坚持输出时，财富会随之而来。避免因好奇心而频繁换方向——散漫是你财运最大的漏洞。",
-cb:["1","5","9"],cg:["2","6"],
-advice:[{t:"选定一个核心方向，深耕六个月",b:"给自己一个规则：在某个创意领域，坚持输出六个月再判断。你会发现深度带来的成就感远超广度。"},{t:"把想法写下来，而不只是说出来",b:"你有无数好主意，但大多停留在谈话里。每天记录三个想法，并标记哪个值得行动。"},{t:"情绪来了，先暂停24小时",b:"你的表达力是礼物，但在情绪高峰时说出的话，有时会留下不必要的伤痕。给自己一个缓冲。"},{t:"建立最小可行的日常结构",b:"创意需要结构才能持续开花。固定一个创作时段，哪怕只是一小时，都能让你的产出翻倍。"}],
-quote:"你的创意是礼物，落地才是奇迹。"},
-
-4:{name:"稳定·实干",keyword:"秩序 / 安全 / 土星",tags:["执行力超强","踏实可靠","有条不紊","中流砥柱"],
-core:`你是数字4——土星的能量。稳定、秩序、踏实是你的核心基因。你是把梦想变成现实的那个人——当别人还在高谈阔论时，你已经在制定计划、落实步骤。<br><br><strong>团队里有你，大家才真正踏实。</strong>你不是最耀眼的那颗星，但你是让整个系统运转的那根轴。`,
-gift:"执行力强，计划性出色，能把复杂的目标拆解为可操作的步骤。你是天生的项目管理者，擅长在混乱中建立秩序，把不可能变成已完成。",
-shadow:"过于保守是你最大的限制。当变化来临，你的第一反应是抗拒而非适应。对安全感的需求有时让你错失真正的机遇。刻板和固执也可能让周围的人感到窒息。",
-relation:`你在关系中忠诚、可靠、稳定，是对方最坚实的后盾。但有时你的实际主义会让关系缺少浪漫与惊喜——你很难理解为什么要"无缘无故"制造惊喜。<br><br><strong>你需要的是能欣赏你踏实的人，同时你也要试着偶尔打破自己的计划，给生活留一点即兴的空间。</strong>`,
-career:"工程、建筑、金融、法律、项目管理、制造业——需要精准、严谨、长期执行的领域，你天生在行。你不适合朝令夕改、缺乏结构的工作环境。",
-wealth:"你的财富来自稳定积累，而非一夜暴富。长期投资、踏实经营是你的财富路径。避免被\"快速致富\"的机会吸引——那通常是你财运的陷阱，而非机遇。",
-cb:["2","6","8"],cg:["1","7"],
-advice:[{t:"每月主动拥抱一次变化",b:"哪怕是换一条上班路线、尝试一道没吃过的菜。小小的主动改变，能逐渐软化对变化的恐惧。"},{t:"区分「谨慎」和「恐惧」",b:"谨慎是评估风险后的选择；恐惧是还没评估就先拒绝。下次说\"不\"之前，先问：我是在分析，还是在逃避？"},{t:"多表达情感，不只是行动",b:"你的爱是默默去做事，但伴侣和朋友有时需要的是听你说出来。说出你的感受，而不只是用行动证明。"},{t:"相信过程中的混乱是正常的",b:"不是所有事都能按计划进行。当计划失控时，不是失败的信号，而是调整的契机。"}],
-quote:"大厦之稳，来自你这样的人。"},
-
-5:{name:"自由·冒险",keyword:"变化 / 感官 / 水星",tags:["适应力极强","热爱自由","思维灵活","天生销售"],
-core:`你是数字5——水星的能量。自由、变化与感官体验是你的命脉。你渴望体验生命的每一种可能性，不愿被任何一个标签或框架锁定。<br><br>你是天生的探险家——不只是地理上的，更是思想上的。<strong>你的世界里没有"不可能"，只有"还没试过"。</strong>`,
-gift:"适应能力极强，能在任何环境快速找到自己的节奏。思维灵活，沟通天才，天生的销售与谈判高手。你能感知场域的变化，在别人还没反应过来时，你已经调整好了方向。",
-shadow:"厌倦是你的宿敌。当新鲜感消退，你就开始坐立不安，寻找下一个刺激。对承诺的恐惧，让你有时错失真正深度的关系和事业。",
-relation:`你的魅力让人着迷，初期的关系总是充满火花。但当关系进入稳定期，你开始感到"困住了"——这是你最需要面对的功课。<br><br><strong>真正的自由，不是不承诺，而是在承诺之内依然感到自由。</strong>找到那个让你自由呼吸又愿意扎根的人，是你人生最重要的功课之一。`,
-career:"销售、旅游、媒体、公关、创业、自由职业——需要灵活适应、快速沟通、跨界整合的领域是你的乐园。朝九晚五、重复单一的工作会让你窒息。",
-wealth:"你的财富机会多、来得快，但也可能去得快。善用你的感知力捕捉机遇，但要建立一个稳定的财务底盘——把每次的收益留出一部分作为不动的储备。",
-cb:["1","3","7"],cg:["5","9"],
-advice:[{t:"在核心领域建立「自由边界」",b:"给自己设定一个不变的核心（比如一个主业、一段关系），其余保持灵活。根基越稳，你飞得越远。"},{t:"允许自己慢下来，体验深度",b:"你习惯了广度，但深度体验——一本书反复读、一个人真正了解——会给你意想不到的满足感。"},{t:"把「厌倦」当作信号，而不是行动指令",b:"当厌倦来临，先问自己：是这件事真的没价值了，还是我只是需要换一个角度？"},{t:"建立简单的财务规则并坚守",b:"比如每月固定储蓄一个比例。这不是束缚，是让你的冒险更有底气的安全网。"}],
-quote:"真正的冒险者，知道何时该停下来，扎根生长。"},
-
-6:{name:"责任·爱",keyword:"关怀 / 家庭 / 金星",tags:["同理心超强","天生守护者","责任感深厚","创造和谐"],
-core:`你是数字6——金星的能量。爱、责任与关怀是你的核心驱动力。你不只是在"帮助"别人，你是真心觉得照顾好身边的人是自己的使命。<br><br><strong>你是那个让别人感到安全的人。</strong>你的存在本身，就是一种温暖的力量。`,
-gift:"极强的同理心，能真正感受到他人的痛苦与需要。善于创造和谐的环境，化解冲突，让团队或家庭凝聚在一起。你在服务型角色中会发出最耀眼的光。",
-shadow:"过度付出是你最深的陷阱。你给予，给予，再给予，却忘了自己也有需要。当付出得不到对等的回应，你不会立刻爆发，而是慢慢积累成深层的委屈与疲惫。",
-relation:`你在关系中是最温柔的守护者，把对方照顾得无微不至。但这也带来一个风险：<strong>你把太多的自我价值绑定在"被需要"上。</strong>当对方独立了，或不再需要你的照顾，你会感到失落甚至嫉妒。<br><br>真正的爱，是让对方自由生长，同时自己也持续成长。`,
-career:"医疗、心理咨询、教育、社会工作、设计、家庭服务——任何滋养生命、创造美与和谐的领域，你都能做到极致。",
-wealth:"你的财富意识有时需要加强——你太容易把金钱用于照顾他人，而忽视了自己的财务安全。建立\"先照顾自己\"的财务意识，才能真正长久地照顾身边的人。",
-cb:["2","4","9"],cg:["3","6"],
-advice:[{t:"把「照顾自己」列为每日首要任务",b:"在照顾他人之前，先问自己：我今天吃好了吗？睡够了吗？有没有做一件让自己开心的事？"},{t:"设立清晰的边界，温柔地坚守",b:"说\"我现在没办法帮这个\"不是冷漠，而是诚实。边界是爱自己，也是尊重关系。"},{t:"接受他人的照顾，让自己被接住",b:"当有人想为你做些什么，允许自己接受，而不是立刻说\"不用了我自己来\"。被照顾，也是一种练习。"},{t:"区分「关心」和「控制」",b:"出于爱的过度介入，有时会变成对方的压力。信任他人有能力照顾自己的人生，是另一种更深的爱。"}],
-quote:"你给世界的温柔，同样值得被温柔以待。"},
-
-7:{name:"智慧·探索",keyword:"内省 / 灵性 / 海王星",tags:["洞察力深邃","哲学思考者","直觉精准","独立内省"],
-core:`你是数字7——海王星的能量。深邃、内省、对真相有强烈的渴求。你不满足于表面的答案，你要追问到最底层的本质。<br><br>你是天生的哲学家与探索者，看到他人看不见的层次。<strong>你的内心世界，比外在世界更广阔、更丰富。</strong>`,
-gift:"分析力强，思维深刻，有天生的直觉洞察力。你能在数据、现象或对话中发现常人忽视的规律与真相。在研究、哲学、心理、科技领域往往有独特建树。",
-shadow:"过于封闭是你最深的限制。你不轻易信任，不轻易开口，这保护了你，却也把真正亲密的可能性隔在了门外。悲观与孤独有时是你的伴侣，你甚至会觉得\"别人不可能理解我\"。",
-relation:`你的内心世界极为丰富，但你给他人看到的，往往只是冰山一角。这让亲近你的人感到有距离——他们想了解你，但总像隔着一层玻璃。<br><br><strong>真正的亲密，需要你愿意打开那扇内心的门。</strong>不必把一切都说出来，但试着让一个你信任的人，真正走进来。`,
-career:"研究、数据分析、心理、哲学、技术、写作、灵性领域——任何需要深度思考与洞察的领域，你能走到别人到不了的深处。你不适合需要大量表演型社交的工作。",
-wealth:"你对金钱的态度较为超脱，不以财富为核心驱动力。但这也可能让你在财务规划上比较被动。建立一个简单而自动化的财务系统，让钱的事情少占用你宝贵的心智资源。",
-cb:["1","5","4"],cg:["2","7"],
-advice:[{t:"主动分享你的内心，哪怕只是一小部分",b:"你的洞见是礼物。每周找一个你信任的人，分享一个你的真实想法——不是结论，而是你的感受和困惑。"},{t:"走出思考，进入行动",b:"你能把一个问题想透彻，但想透彻不等于解决了它。选一个你已经想清楚的事，今天就做第一步。"},{t:"建立信任，需要时间，但值得",b:"你的不信任往往来自过去的经历。但用怀疑的滤镜看所有人，会让你错过真正值得的连接。"},{t:"照顾你的身体",b:"你最容易忽视的就是身体的信号。你的头脑在高速运转时，身体在默默透支。规律的运动和睡眠，是你最好的系统维护。"}],
-quote:"你所探索的深处，正是世界最需要光的地方。"},
-
-8:{name:"权力·财富",keyword:"成就 / 物质 / 土星",tags:["领导力极强","商业嗅觉敏锐","掌控全局","成就驱动"],
-core:`你是数字8——土星最强的表达。权力、财富与成就是你的主旋律。你天生懂得驾驭资源，看清结构，在任何系统中都能找到杠杆点。<br><br>你不是为了平凡而来的。<strong>你内心深处知道，自己可以做成一些别人认为很难的事。</strong>而你通常是对的。`,
-gift:"领导能力与商业嗅觉天然。你能看清一件事的本质结构，找到最有效的切入点。在资源调配、战略决策、驾驭权力结构方面，你往往比别人快半步。",
-shadow:"控制欲是你最大的阴影面。你对\"事情必须按正确方式运行\"有强烈的执念，这容易让你在关系和团队中变得强势甚至专制。过于注重物质成就，有时会让你忽视情感与内心的需要。",
-relation:`你在关系中是强有力的保护者和提供者，给伴侣安全感和稳定。但你的主导欲有时让亲密的人感到喘不过气——他们被保护，却没有被真正听见。<br><br><strong>你最需要学习的，是放手。</strong>不是放弃，而是相信身边的人有能力照顾好自己，你不必永远是那个撑着所有人的人。`,
-career:"商业、金融、管理、投资、战略咨询、房地产——任何需要驾驭大局与资源、追求成果的舞台，都是你施展的地方。你在大系统里越能发挥，越容易走到高位。",
-wealth:`8号人的财富往往经历明显的起伏——不是平稳积累，而是<strong>大起大落</strong>。这不是坏事，而是你的人生结构。每一次低谷背后通常藏着更大的反弹，关键是在低谷时不因焦虑做出冲动决策。你的财富与权力紧密相连——当你掌握更多决策权时，财富自然随之增长。`,
-cb:["2","4","6"],cg:["1","8"],
-advice:[{t:"把成功的定义扩展到物质之外",b:"关系的质量、内心的平静、身体的健康——这些同样是你值得投入的\"财富\"。每季度评估一次：这四个维度，哪个被你忽视了？"},{t:"练习放权，这是另一种掌控",b:"有意识地把某些决定权交给身边的人，观察结果。你会发现这不是失控，而是更聪明的能量分配。"},{t:"表达你内心的柔软",b:"你的外壳让人以为你刀枪不入。但你其实也有疲惫、困惑和不确定。试着在最信任的关系里，说出来——这会让那段关系更深。"},{t:"把身体管理当成重要事项",b:"8号人高强度运转，容易把身体信号当作小问题忽视。定期体检、充足睡眠、适度运动——把\"维护自己\"当成管理重要资产来对待。"}],
-quote:"真正的强大，不是握紧一切，而是有能力放开，然后一切仍在。"},
-
-9:{name:"圆满·智慧",keyword:"博爱 / 完成 / 宇宙",tags:["综合能力出众","格局广阔","感染力强","天生引路人"],
-core:`你是数字9——所有数字的集大成者，1到8的智慧都在你身上留下了印记。你拥有广阔的格局与深厚的悲悯，能理解各种不同的人，能感受各种不同的处境。<br><br><strong>你是天生的智者与引路人。</strong>身边的人常常在不知不觉中被你影响、被你启发。`,
-gift:"综合能力极强，情商出众，适应不同场合与人群。你有天然的感召力，在任何领域都能快速上手，广受人喜爱与信任。你的存在本身，就是一种激励。",
-shadow:"贪多嚼不烂，样样通样样松。因为什么都能做、什么都感兴趣，你反而难以聚焦。目标不清晰、难以完成是你的老问题。有时你的博爱会变成一种逃避——把精力散给所有人，却不愿深入经营少数几段真正重要的关系。",
-relation:`你对人有天然的感召力与温暖，但你的博爱特质有时让亲密关系中的人感到：<strong>你谁都爱，却没有人是你最特别的。</strong><br><br>深度经营几段关系，比广泛连接更能滋养你和对方。学会把你的博爱，聚焦在几个真正重要的人身上。`,
-career:"教育、公益、艺术、灵性领域、领导力培训、心理咨询——任何需要引领与启发他人的领域，你都是最合适的人选。你的人生使命往往比职业本身更大。",
-wealth:"你对财富的态度往往超脱，但这也可能让你在物质层面缺乏规划。记住：只有先把自己照顾好，才能真正照顾别人。财富是实现使命的工具，而非目的——但工具也需要认真打磨。",
-cb:["3","6","9"],cg:["1","2"],
-advice:[{t:"选定一个核心使命，深耕到底",b:"你什么都能做，但你的生命力量在\"专一\"中才能真正释放。问自己：如果只能做一件事，我想留下什么？"},{t:"学会完成，而不只是开始",b:"完成一件事，比开始十件事更有力量。给每个项目设定明确的截止点，并承诺自己到达它。"},{t:"把博爱化为具体的、持续的行动",b:"感受到对世界的悲悯是起点，但落地才是力量。选一个你真正关心的议题，长期投入，而不是泛泛地什么都关心。"},{t:"深耕几段核心关系",b:"你的感召力让你身边总有很多人，但真正的亲密需要专注。选择几个你最在乎的人，给他们更多真实的自己。"}],
-quote:"你的使命，是把你走过的路，变成他人前行的光。"}
+// ═══════════════════════════════════════════════
+// 1. 单数字能量库（1-9）
+// ═══════════════════════════════════════════════
+const NUM = {
+  1:{name:"独立",symbol:"太阳",energy:"开创力、自我意志、领导魄力",gift:"天生领袖，勇于开拓，执行力强",shadow:"固执己见，难以妥协，孤僻独行"},
+  2:{name:"感知",symbol:"月亮",energy:"直觉力、共情力、关系协调",gift:"细腻敏感，善于聆听，是天生的调解者",shadow:"依赖认可，优柔寡断，自我边界模糊"},
+  3:{name:"创意",symbol:"木星",energy:"表达力、创造力、社交感染力",gift:"创意无限，口才出众，能点亮任何场合",shadow:"三分钟热度，情绪化，难以深耕"},
+  4:{name:"稳定",symbol:"土星",energy:"秩序感、执行力、踏实耐力",gift:"可靠务实，擅长将计划落地，是团队基石",shadow:"过于保守，抵触变化，可能显得刻板"},
+  5:{name:"自由",symbol:"水星",energy:"变化力、适应力、感官体验",gift:"灵活善变，适应力强，天生销售与沟通高手",shadow:"厌倦承诺，注意力分散，难以持续专注"},
+  6:{name:"责任",symbol:"金星",energy:"关怀力、责任感、和谐创造",gift:"同理心深，守护者本能，创造温暖凝聚的环境",shadow:"过度付出，把自我价值绑定在被需要上"},
+  7:{name:"智慧",symbol:"海王星",energy:"洞察力、内省力、灵性探索",gift:"思维深刻，直觉精准，能看透表象背后的本质",shadow:"过于封闭，不信任他人，容易陷入孤独悲观"},
+  8:{name:"权力",symbol:"土星·高阶",energy:"驾驭力、成就驱动、资源整合",gift:"战略视野强，商业嗅觉天然，能掌控复杂系统",shadow:"控制欲强，忽视情感，物质主义倾向"},
+  9:{name:"圆满",symbol:"宇宙",energy:"博爱、综合智慧、使命感",gift:"格局广阔，感召力强，综合能力出众",shadow:"目标分散，难以专注，博爱有时替代了深度"}
 };
 
+// ═══════════════════════════════════════════════
+// 2. 天赋数两位组合含义库（所有可能的两位天赋数）
+// ═══════════════════════════════════════════════
+const COMBO = {
+  // ──── 天赋数 10-19 ────
+  "10":{title:"10/1 · 归零后的领袖",text:"你的开创力经过\"零\"的洗礼——0代表无限可能，也代表从头再来。你的领导力不是天生霸道，而是经历过某种清空与重建之后，变得更有深度与韧性。你最强的时刻，往往是在经历失去之后。",key:"从零开始的创造力"},
+  "11":{title:"11/2 · 双重直觉的感知者",text:"11是强力灵性数，双重1的叠加让你的直觉近乎第六感。你对人心和场域的感应极为敏锐，有时甚至让你自己感到不安。你的功课是学会相信自己感受到的，而不是被它淹没。",key:"灵性直觉 · 精神敏感体质"},
+  "12":{title:"12/3 · 协作中迸发的创造者",text:"你的创造力需要在与他人的互动中被激发。独自一人时你可能陷入创意停滞，但一旦置身于有活力的关系或团队中，你的表达力会爆发出惊人能量。人际关系是你创意的燃料。",key:"关系激发创造力"},
+  "13":{title:"13/4 · 创意转化为秩序",text:"你有强烈的创造冲动，同时又有将其结构化落地的本能。你不只是想象者，你更是实现者。这两股力量有时会互相拉扯——灵感来了想飞，现实又把你拉回来——但当两者平衡，你能创造出真正持久的作品。",key:"创意与执行的双重天赋"},
+  "14":{title:"14/5 · 稳定基础上的自由",text:"你渴望自由与变化，但内心深处有一个对稳定的需求在拉着你。你的人生课题是：在建立了足够稳固的根基之后，才真正能享受那份自由——否则你的冒险会变成漂泊。",key:"自由需要根基"},
+  "15":{title:"15/6 · 自由灵魂的守护者",text:"你既渴望自由，又有强烈的责任感与关怀本能。这两者的拉锯是你人生的主旋律：想飞，又放不下。你最终会发现，你的使命不是选择其中一个，而是找到让两者并存的方式——为你爱的人守护，同时不失去自己。",key:"爱与自由的平衡"},
+  "16":{title:"16/7 · 经历崩塌后的智慧者",text:"16是一个\"大变数\"组合——1（自我）与6（责任）在7（内省）的层面相遇。这意味着你的智慧往往来自某次重大的崩塌或颠覆，无论是关系、事业还是信念。失去让你看见了真相，这是你最深刻的礼物。",key:"废墟中生长的洞察力"},
+  "17":{title:"17/8 · 灵性与物质的整合者",text:"你是数字中最少见的组合之一：1（开创）与7（灵性）共同指向8（成就）。这意味着你的成功不能只靠蛮力，必须融入直觉与内在洞察。当你信任那个\"说不清道不明\"的内在声音，你的商业与领导力会达到常人难以企及的高度。",key:"直觉驱动的领导力"},
+  "18":{title:"18/9 · 权力服务于博爱",text:"1（领袖）加8（权力）指向9（博爱），这是一个\"以力量服务人类\"的组合。你天生有驾驭大系统的能力，而你的使命是把这种能力用于更大的集体福祉，而非单纯的个人成就。当你的成功能惠及更多人时，你才真正活在自己的轨道上。",key:"权力为使命服务"},
+  "19":{title:"19/1 · 经历循环的开拓者",text:"19/1意味着你走过了1到9的完整循环，然后回到1——但这是一个更高维度的开拓。你的经历比同龄人更复杂，也更深刻。你的领导力来自你真正走过的路，而不是书本上的理论。",key:"历经百转后的开创"},
+  // ──── 20-29 ────
+  "20":{title:"20/2 · 无我的感知者",text:"20/2中，\"0\"放大了2的直觉与感知能力，同时带来了\"无我服务\"的使命感。你天生愿意为他人付出，但0也提醒你：真正的服务来自内在的充盈，而非自我牺牲。先把自己装满，才能真正滋养他人。",key:"无我服务 · 需防自我消耗"},
+  "21":{title:"21/3 · 关系滋养中的创造者",text:"2（关系）与1（自我）的组合，通向3（创意表达）。你的创造力最需要的燃料是：被看见、被支持。在充满爱与认可的环境中，你能创作出感动他人的作品；在孤立中，你的创意会枯萎。认识到这一点，主动构建你的支持系统。",key:"爱是创意的燃料"},
+  "22":{title:"22/4 · 大师建造者",text:"22是最强的天赋数之一，被称为\"大师数\"。双重2的敏感与直觉，落地为4的实干力，意味着你有能力将宏大的愿景变成现实。你的人生课题不是\"能不能做到\"，而是\"敢不敢梦得足够大\"，然后一步一步把它建造出来。",key:"大师建造者 · 将愿景变现实"},
+  "23":{title:"23/5 · 感知与创意共驱的自由人",text:"2（感知）与3（创意）的结合，让你兼具细腻的情感智慧和丰富的创造能量，统一指向5（自由）。你最需要的生命状态是：在充满创意与真实连接的环境中，自由地探索与表达。任何让你感到窒息或重复的处境，都是你该离开的信号。",key:"感性创意 · 渴望自由流动"},
+  "24":{title:"24/6 · 用关怀建造稳定",text:"2（感知他人）与4（踏实执行）一起，服务于6（关怀责任）。你最擅长的，是用稳定可靠的方式照顾好身边的人。你不只是说说而已，你真的去做——从生活细节到长期承诺。你的爱是有重量的，值得被看见。",key:"用行动表达的深沉之爱"},
+  "25":{title:"25/7 · 感性直觉加持的智者",text:"2（感知）与5（变化探索）通向7（内省洞察）。你的智慧来源是直觉与体验——你不是从书本里学习，而是用自己的感受和经历去参透真相。你的洞察往往在别人看来\"说不清楚为什么\"，但往往是对的。",key:"用感受力获得洞察"},
+  "26":{title:"26/8 · 关怀驱动的权力掌控者",text:"2（感知关系）与6（责任关怀）共同指向8（成就权力）。这让你成为一种特殊的领导者——<strong>你的权力欲不是纯粹为了自己</strong>，而是带着一种深层的责任感：\"我要做强，是因为我要保护和照顾我在乎的人\"。这让你比纯粹的8号人更有人情温度，但也更容易因为情感投入而在商业决策中丧失客观。",key:"有温度的权力 · 情感与决断的平衡"},
+  "27":{title:"27/9 · 感知与智慧共铸的博爱者",text:"2（感知）与7（洞察）的完美组合，让你对人心和世界的理解达到近乎超然的深度，最终指向9（博爱使命）。你看人很准，理解他人比理解自己更容易。你的使命是把这种深刻的理解，转化为真实地帮助他人成长。",key:"看见人心 · 智慧型博爱"},
+  "28":{title:"28/1 · 合作开创的领袖",text:"2（合作感知）与8（权力成就）共同指向1（开创领袖）。你的领导力不是孤立的英雄主义，而是通过建立关系、整合资源来实现的。你能感知人心，也能驾驭权力——当两者结合，你能创建出真正有凝聚力的团队与事业。",key:"通过关系构建的领导力"},
+  "29":{title:"29/2 · 使命中的感知者",text:"2（感知）与9（使命博爱）的叠加，让你的共情能力带有一种宏观的社会责任感。你感受到的不只是个人的痛苦与喜悦，还有更大集体的情绪与需求。这是一种沉重的礼物——你的课题是不被这种感受淹没，而是将其转化为行动。",key:"感受集体 · 使命型共情"},
+  // ──── 30-39 ────
+  "30":{title:"30/3 · 无限创意的源泉",text:"3与0的组合，意味着你的创造力接近无穷——0是宇宙的空性，也是一切可能的容器。你的创意几乎没有边界，但也因此容易在无尽的可能中失去方向。你的功课是学会选择，而非什么都想要。",key:"无限创意 · 需要聚焦"},
+  "31":{title:"31/4 · 创意落地的建造者",text:"3（创意）与1（开创领导）共同将能量导向4（稳定执行）。你是那种不只会想、还真的能做的人。创意、推动力、执行力三者俱备，是少见的天赋组合。你真正的挑战是学会与他人合作，而非独自把一切都扛下。",key:"想法 · 推动 · 落地三合一"},
+  "32":{title:"32/5 · 创意社交的自由探索者",text:"3（表达创意）与2（关系感知）指向5（自由变化）。你最需要的是一个能与你深度交流、不断激发你的人际圈。你的创造力是社交性的，在人群与对话中被点燃。封闭与孤独是你的创意杀手。",key:"社交激发创意 · 自由探索"},
+  "33":{title:"33/6 · 大师教师与守护者",text:"33被称为\"大师教师数\"，是最高层级的天赋数之一。双重3的创造与表达，落地为6的关怀责任，意味着你天生有感召与教化他人的能力。你的人生使命可能比你目前想象的更宏大——去承担它，而不是躲避它。",key:"大师教师 · 感召与启发他人"},
+  "34":{title:"34/7 · 踏实探索的智者",text:"3（创意）与4（稳定）指向7（智慧内省）。你不是那种坐在象牙塔里空想的哲学家，而是通过实际的探索与创作获得洞察的人。你的智慧是可以被应用的，你的创意是经得起检验的。",key:"实践型智慧"},
+  "35":{title:"35/8 · 创意变现的实力派",text:"3（创意表达）与5（变化适应）指向8（成就权力）。你有能力把想法变成影响力，把创意变成财富。你不是单纯的艺术家，也不是单纯的商人——你是那种能把\"有趣\"变成\"有价值\"的人。",key:"创意商业化 · 把灵感变成成就"},
+  "36":{title:"36/9 · 创意与爱汇聚的使命者",text:"3（创意）与6（爱与责任）指向9（使命博爱）。你的创造力本质上是一种给予——你创作不只是为了自己，而是希望你的作品能滋养、启发和治愈他人。当你的创意与更大的使命感联结时，你能触动人心的深处。",key:"用创意服务人心"},
+  "37":{title:"37/1 · 智慧领路的开创者",text:"3（创意）与7（洞察）指向1（开创领导）。你的领导力建立在智慧与洞察之上，而非纯粹的权威与强势。你能想清楚别人想不清楚的事，能看见别人看不见的路，然后带着大家走过去。",key:"智慧型领导力"},
+  "38":{title:"38/2 · 权力包裹下的感知者",text:"3（创意）与8（权力）通向2（感知协调），这是一个少见的组合。你表面上可能看起来强势甚至有些霸气，但内心深处是一个极为细腻、渴望真实连接的人。你的力量在于将这两面整合——让外在的力量服务于内心真正的感知与需要。",key:"强大外表下的细腻内心"},
+  "39":{title:"39/3 · 智慧加持的创意表达者",text:"3（表达）与9（博爱圆满）通向更高维度的3。这意味着你的创造与表达有着超越自我的使命感——你说出来的话、写出来的字、做出来的事，往往能触碰到他人最柔软的地方。你的表达是礼物，不要让恐惧阻止你把它送出去。",key:"触动人心的表达"},
+  // ──── 40-49 ────
+  "40":{title:"40/4 · 无边界的稳定建造者",text:"4与0，意味着你的踏实与执行力近乎没有上限——只要你认定的事，就能用极度的耐心与坚持将其完成。0的加持让你的稳定感不是来自外部条件，而是来自内在深处，因此即使在混乱的环境中，你也能保持稳定。",key:"内在稳固 · 无惧外部混乱"},
+  "41":{title:"41/5 · 稳定基础上的探索者",text:"4（稳定）与1（开创）指向5（自由）。你的自由不是无根的漂泊，而是在稳固的基础上飞翔。你先建好地基，然后从容探索——这让你的冒险比大多数5号人都更能持久，成果也更扎实。",key:"有根基的自由"},
+  "42":{title:"42/6 · 踏实守护的责任者",text:"4（稳定执行）与2（感知关怀）共同指向6（责任爱）。你用行动而非言语来表达爱——你记得每一个重要的日期，做好每一个实际的安排，把家庭或团队管理得井井有条。你的爱是有重量的，沉甸甸的，值得被珍视。",key:"用行动表达的深沉爱"},
+  "43":{title:"43/7 · 结构思维下的智者",text:"4（秩序）与3（创意）指向7（洞察智慧）。你的智慧是有条理的——你不是那种灵感四溅的直觉型人，而是通过系统性的思考与分析，将复杂的问题拆解并找到答案。你的洞察经得起推敲，也能被他人理解和应用。",key:"系统性洞察力"},
+  "44":{title:"44/8 · 超级建造者与成就者",text:"44是顶级天赋数，被称为\"超级建造者\"。双重4的踏实执行加上8的权力成就，意味着你有能力创建真正持久的、大规模的事业或系统。你的挑战不是能力，而是敢不敢把目标定得足够大，然后用你超强的执行力一步步实现它。",key:"超级建造者 · 大规模实现愿景"},
+  "45":{title:"45/9 · 踏实实现使命的人",text:"4（执行稳定）与5（自由变化）指向9（使命圆满）。你有能力把宏大的使命分解为可执行的步骤，并真正地做到。你不只是说\"我想改变世界\"的人，你是真的在一步一步去做的人。",key:"使命的脚踏实地执行者"},
+  "46":{title:"46/1 · 以责任感驱动的开创者",text:"4（稳定秩序）与6（爱与责任）指向1（开创领导）。你的开创力来自使命感，而非单纯的个人野心。你做事情是因为\"这件事应该被做好\"，这种驱动力让你比一般的创业者更有韧性，也更受人信赖。",key:"使命感驱动的领导"},
+  "47":{title:"47/2 · 踏实内省的感知者",text:"4（稳定）与7（内省智慧）指向2（关系感知）。你的感知力是经过深思熟虑后的——你不只是\"感觉到\"，你还能把感觉分析清楚、表达出来。这让你成为一个极为值得信赖的倾听者和建议者。",key:"经过分析的直觉 · 可信赖的洞察"},
+  "48":{title:"48/3 · 权力与稳定释放的创意",text:"4（稳定）与8（权力）指向3（创意表达）。你的创造力有一个强大的支撑系统——稳定的结构和驾驭资源的能力，让你的创意不只停留在想象，而是能被真正实现和放大。",key:"有资源支撑的创意"},
+  "49":{title:"49/4 · 使命落地的务实者",text:"4（执行）与9（博爱使命）叠加回4，意味着你的人生使命与踏实行动高度统一。你不是那种只谈理想的人，你真的会把它做出来。你的功课是学会放大目标，不要因为过于务实而压缩了自己的格局。",key:"务实地实现使命"},
+  // ──── 50-以上 ────
+  "50":{title:"50/5 · 无限自由的探索者",text:"5与0的组合，让你的自由渴望趋近无限。你对生命体验的渴望是多方面而强烈的，0的加入意味着每一次看似的终点都是新的起点。你的人生不会是一条直线，而是一个螺旋——每一圈都回到自由，但在更高的维度上。",key:"无限探索 · 螺旋上升的自由"},
+  "51":{title:"51/6 · 自由灵魂的守护者",text:"5（自由）与1（开创）指向6（爱与责任）。你的使命是在自由与责任之间找到平衡——你既渴望自由探索，又有强烈的守护本能。当你学会了在承担责任的同时不失去自我，你就找到了真正的人生节奏。",key:"自由与守护的融合"},
+  "52":{title:"52/7 · 感知驱动的探索智者",text:"5（探索）与2（感知）指向7（智慧洞察）。你通过对世界的广泛探索和对人心的细腻感知，积累出一种独特的智慧——不是从书本得来的，而是用脚走出来、用心感受出来的。",key:"行走的智慧 · 体验型洞察"},
+  "53":{title:"53/8 · 创意自由通向成就",text:"5（自由适应）与3（创意）指向8（成就权力）。你有能力把灵活的头脑和丰富的创意，转化为真实的成就与影响力。你不是按部就班的人，但你的非常规路径往往能到达别人到不了的高度。",key:"非常规路径通向卓越"},
+  "54":{title:"54/9 · 自由探索中完成使命",text:"5（变化）与4（稳定）指向9（圆满使命）。你同时拥有探索的冲动和落地的能力，这两者的结合让你能在宽广的人生旅程中，真正完成某些重要的事情，而不只是经历了许多。",key:"广度与深度并存的使命"},
+  "55":{title:"55/1 · 双重自由能量的先行者",text:"55是极强的天赋数，双重5的自由能量指向1（开创）。你是真正意义上的先行者——走在时代前面，打破旧有模式，开创新的可能性。你的功课是学会在激烈的变化中保持内在的稳定，而不是在自由中迷失方向。",key:"时代先行者 · 打破旧模式"},
+  "56":{title:"56/2 · 自由与责任共鸣的感知者",text:"5（自由）与6（责任）指向2（感知协调）。你内心永远有两种声音在对话：想飞的自由渴望，和不想让身边人失望的责任感。你的成长之路，就是让这两种声音不再对抗，而是对话，最终找到只属于你的节奏。",key:"在自由与责任中找到自我"},
+  "57":{title:"57/3 · 智慧自由的创意表达",text:"5（探索）与7（洞察）指向3（创意表达）。你把探索中获得的洞察，通过创意和表达传递给他人——这是一种极为独特的天赋。你的作品往往有一种既自由又深刻的质感，让人感受到它来自真实的生命体验。",key:"将洞察化为创意表达"},
+  "58":{title:"58/4 · 自由精神的稳定建造者",text:"5（自由）与8（权力成就）指向4（稳定落地）。你有冒险的精神和驾驭资源的能力，但你的终点是建造真正稳固的东西——不是昙花一现的成功，而是经得起时间考验的成就。",key:"冒险精神 · 稳固成就"},
+  "59":{title:"59/5 · 使命中的自由探索者",text:"5（自由）与9（使命）的叠加指向更高层面的5。这意味着你的自由本身就是使命——你不是在逃避，而是在探索人类体验的边界，为他人打开更多可能性。",key:"自由本身是使命"},
+  "60":{title:"60/6 · 无边界的守护者",text:"6与0的组合，让你的关怀与责任感近乎无限——你几乎对所有人都有关爱的冲动。0提醒你：你无法照顾所有人，选择把爱给予最重要的人，才能真正滋养而不是消耗。",key:"无边界的爱 · 需要聚焦"},
+  "61":{title:"61/7 · 责任铸就的智慧者",text:"6（责任爱）与1（开创）指向7（智慧内省）。你通过承担责任和主动开创这两种行动，积累出一种来自实践的深刻智慧。你不是空谈者，你的洞察背后有真实的经历作为支撑。",key:"实践中获得的智慧"},
+  "62":{title:"62/8 · 关系与感知驱动的成就者",text:"6（关怀责任）与2（感知协调）指向8（成就权力）。你通过建立深度关系和细腻的人心感知来实现成就——你的成功路径不是单打独斗，而是通过构建信任网络、赢得人心来达到的。",key:"赢得人心的成功路径"},
+  "63":{title:"63/9 · 爱与创意汇聚的使命者",text:"6（爱与责任）与3（创意表达）指向9（博爱使命）。你用创意表达爱，用爱驱动创意——这两者在你身上融为一体，指向一个更大的使命：让更多人感受到温暖与美好。",key:"以爱为源泉的创意使命"},
+  "64":{title:"64/1 · 稳固责任感中的领袖",text:"6（责任）与4（稳定）指向1（开创领导）。你是那种先把自己的根扎稳，确认责任都被承担，然后才开始领导的人。你的权威来自他人的信任，而这份信任是你用长期的可靠性赢得的。",key:"以信任为基础的领导力"},
+  "65":{title:"65/2 · 责任与自由之间的协调者",text:"6（责任）与5（自由）指向2（感知协调）。你的内心永远在责任与自由之间拉锯，而你天生的感知力让你能感受到何时该给予，何时该放手。学会倾听这个内在的声音，是你最重要的功课。",key:"在给予与放手之间找到平衡"},
+  "66":{title:"66/3 · 超级关怀者的创意表达",text:"66是大师数，双重6的关怀与爱，通过3（创意）来表达。你有能力用艺术、语言或任何创意形式，传递出能治愈他人的温暖。这是一种珍贵的天赋——去表达它，让更多人感受到你内心那份无尽的爱。",key:"以创意传递治愈力量"},
+  "67":{title:"67/4 · 用爱与洞察建造的稳定",text:"6（爱）与7（洞察）指向4（稳定落地）。你用深刻的感知和对人心的理解，建造出真正稳固的关系、家庭或团队结构。你不只是感受，你还能把感受转化为真实的、持久的建设。",key:"深情 · 洞察 · 落地"},
+  "68":{title:"68/5 · 权力与爱共驱的自由者",text:"6（责任爱）与8（权力成就）指向5（自由变化）。你的人生是在掌控与放手之间不断切换的——你有足够的能力撑起大局，但你也深切地渴望自由流动。你的功课是允许自己既强大又自由。",key:"强大中的自由"},
+  "69":{title:"69/6 · 循环中的守护者",text:"6（爱责任）与9（圆满使命）回到6，意味着爱与责任是你最核心的主题——不只是在家庭或工作中，而是在你人生的每一个层面。你的使命本身就是学习如何更深、更智慧地去爱。",key:"爱是使命 · 使命是爱"},
+  "70":{title:"70/7 · 无限深度的探索者",text:"7与0，意味着你的智慧探索没有边界——0不断拓展你能到达的认知深度。你对真相的追问可能永无止境，而这本身就是你的使命：去探索那些别人不愿或不敢探索的深处。",key:"无止境的内在探索"},
+  "71":{title:"71/8 · 洞察力驱动的成就者",text:"7（洞察）与1（开创）指向8（成就）。你的成功来自你与生俱来的洞察力——你能看穿表象，找到别人忽视的机会。你不需要最多的资源，你只需要看清楚正确的方向，然后果断行动。",key:"以洞察创造成就"},
+  "72":{title:"72/9 · 智慧与感知共铸的使命者",text:"7（洞察）与2（感知）指向9（使命博爱）。你有能力深刻理解人心和世界的运行规律，而你的使命是把这种理解化为帮助他人的智慧。你是天生的导师与引路人。",key:"智慧型使命引领者"},
+  "73":{title:"73/1 · 创意洞察加持的领袖",text:"7（洞察）与3（创意）指向1（开创）。你的领导力来自智慧与创意的双重支撑——你既能看清楚方向，又能用有感染力的方式把人带动起来。这让你成为少见的既有远见、又有魅力的领导者。",key:"有远见有魅力的领导"},
+  "74":{title:"74/2 · 分析落地的感知者",text:"7（洞察分析）与4（稳定执行）指向2（感知协调）。你是那种能把抽象的直觉转化为具体建议的人——你的感知力不只是感受，而是有条理、有依据的洞察，能真正帮助到他人。",key:"可落地的直觉与感知"},
+  "75":{title:"75/3 · 智慧自由释放的创意者",text:"7（洞察）与5（自由变化）指向3（创意表达）。你的创意来自你对世界深度的观察和探索，带有一种无法复制的原创性——因为它来自你真实走过的内在旅程。",key:"深度体验催生的原创力"},
+  "76":{title:"76/4 · 洞察责任落地的建造者",text:"7（洞察）与6（责任爱）指向4（稳定建造）。你用深刻的洞察和强烈的责任感，建造出真正经得起时间检验的事物——无论是关系、家庭、事业还是作品。",key:"以智慧与爱建造持久之物"},
+  "77":{title:"77/5 · 双重智慧的自由探索者",text:"77是极强的灵性天赋数，双重7的洞察力指向5（自由）。你对真相的渴望驱使你不断突破界限，探索常人未到之处。你的自由不是逃避，而是探索——去找到更深的真实。",key:"追求真相的自由探索者"},
+  "78":{title:"78/6 · 智慧权力服务于爱",text:"7（智慧）与8（权力）指向6（爱与责任）。你有智慧，也有权力，而这一切最终都服务于你内心深处的使命：照顾好你在乎的人，创造一个更好的世界。",key:"以智慧和力量守护所爱"},
+  "79":{title:"79/7 · 使命指引的智者",text:"7（洞察）与9（使命）通向更高维度的7。这意味着你的智慧本身就是使命——你在这里，是为了看见别人看不见的真相，并以你的方式把它传递出去。",key:"洞见本身即使命"},
+  "80":{title:"80/8 · 无限权力的驾驭者",text:"8与0，双重放大的成就能量。你的驾驭力和资源整合能力近乎无限——0提醒你，你的权力来自更大的宇宙力量，而非个人的小我。当你把这种力量用于服务更大的目标，你能创造出时代级别的影响。",key:"时代级别的影响力"},
+  "81":{title:"81/9 · 权力开创通向使命",text:"8（成就）与1（开创）指向9（博爱使命）。你的一切成就最终指向一个更大的使命——你不是为了自己而成功，而是为了用你的成功去影响和改变更多人的生命。",key:"成就服务于更大使命"},
+  "82":{title:"82/1 · 感知加持的权力开创者",text:"8（权力）与2（感知关系）指向1（开创领导）。你的领导力兼具强势与温度——你能驾驭大局，也能感知人心，这两者的结合让你成为既有威望、又让人愿意追随的领袖。",key:"有人情味的权力领袖"},
+  "83":{title:"83/2 · 成就创意通向感知",text:"8（成就）与3（创意）指向2（感知协调）。你用创意和成就来建立深度的关系——你最有吸引力的时刻，是你在创造并成就某件事的时候。你的感知力在有成果的环境中会更加清晰和准确。",key:"成就激活感知力"},
+  "84":{title:"84/3 · 稳固成就释放的创意",text:"8（成就）与4（稳定）指向3（创意表达）。你的创造力有坚实的基础支撑——稳定的环境和已有的成就，给了你安全感去大胆表达和创造。你在\"有保障\"的状态下，创意最旺盛。",key:"安全感释放创意潜能"},
+  "85":{title:"85/4 · 自由驾驭通向稳固",text:"8（权力）与5（自由变化）指向4（稳定建造）。你的人生是一种动态的稳定——你不断变化、不断探索，但每一次变化都让你走向更稳固的状态。你的成功是螺旋式上升的。",key:"动态稳定 · 螺旋式成长"},
+  "86":{title:"86/5 · 权力与爱之间的自由",text:"8（权力）与6（责任爱）指向5（自由）。你在权力和责任之间，始终渴望一片真正属于自己的自由空间。你的功课是找到在承担强大责任的同时，不失去内心自由的方式。",key:"强大中保有自由"},
+  "87":{title:"87/6 · 洞察加持的权力守护者",text:"8（权力）与7（洞察）指向6（爱与责任）。你有能力看透复杂的系统和人心，并把这种洞察力用于保护和守护你在乎的人和事业。你的权力是有温度的，你的守护是有智慧的。",key:"智慧的权力守护者"},
+  "88":{title:"88/7 · 双重权力的洞察者",text:"88是罕见的大师天赋数，双重8的驾驭力指向7（洞察智慧）。这意味着你不会被权力迷失——你能看透权力的本质，知道它是工具而非目的。这是最难得的领导者特质。",key:"看透权力本质的领袖"},
+  "89":{title:"89/8 · 使命与成就的高度统一",text:"8（成就）与9（使命）的结合，又回到8——这意味着对你来说，成就本身就是使命，使命必须通过成就来实现，两者高度统一，互相加持。当你真正找到那件值得倾尽全力去做的事，你会无可阻挡。",key:"成就即使命 · 使命必成就"},
+  "90":{title:"90/9 · 无限圆满的使命者",text:"9与0，意味着你的使命感近乎无限——0放大了9的博爱与圆满，让你的生命课题超越个人，走向整个人类的共同命运。这是最宏观的使命感，也需要最扎实的落地能力。",key:"宏观使命 · 需要落地"},
+  "91":{title:"91/1 · 博爱开创的先行者",text:"9（博爱圆满）与1（开创）共同指向新的领导原型：你在这里，是为了开创一种新的方式，让更多人活得更有意义和尊严。你的使命是先行者，开辟那条还没有路的路。",key:"为使命开路的先行者"},
+};
+
+// ═══════════════════════════════════════════════
+// 3. 生命数深度解读库
+// ═══════════════════════════════════════════════
+const LIFE = {
+  1:{name:"独立·领袖",kw:"开创 / 自我 / 太阳",tags:["天生开拓者","领袖气质","独立自主","勇于创新"],
+    core:`你是数字1——太阳的能量。独立、开创、强烈的自我意志是你最鲜明的标记。你天生走在前面，不需要别人推着走。<br><br>你内心有一种执念：<strong>事情如果要做，就要以最好的方式做到。</strong>这种驱动力让你在竞争中往往脱颖而出，但也容易让你在关系和合作中显得固执。`,
+    gift:"领导力天然，不是学来的，而是骨子里带来的。你能在混乱中看清方向，在他人犹豫时果断决策。",
+    shadow:"固执是你最大的绊脚石。你相信自己的判断，有时到了听不进他人建议的程度。当你孤注一掷时，旁边那些声音有时是你看不见的风险预警。",
+    relation:`在关系中你是主导者，充满活力与魅力。但你的"我来安排"有时越过了界。<br><br><strong>最适合与拥有独立性、能欣赏你能力的人相处。</strong>你需要的不是崇拜者，而是能与你并肩的人。`,
+    career:"创业、领导、先锋型角色是你的主场。你在需要独立决策、开拓新局的岗位上如鱼得水。",
+    wealth:"你的财富来自主动出击而非守成。财运高峰通常在你敢于独立决策、走出舒适区之后出现。",
+    cb:["3","5","7"],cg:["2","9"],
+    advice:[{t:"练习倾听，而非等待说话的机会",b:"你的直觉通常对，但他人的视角能让你避开盲区。每天至少一次，先听完再表达。"},{t:"允许自己依赖他人",b:"独立是美德，但孤立是消耗。允许团队承担，不是软弱，而是更聪明的力量分配。"},{t:"选定方向，深耕到底",b:"你有开创力，但容易在一件事成功后想去开创下一件。选一个核心领域，做到无可替代。"},{t:"把「必须赢」换成「想要成长」",b:"当你把竞争心转化为成长心，你的能量会更持久，关系也会更顺畅。"}],
+    quote:"世界需要开拓者，而你生来就是。"},
+  2:{name:"合作·感知",kw:"关系 / 直觉 / 月亮",tags:["共情力超强","天生协调者","细腻敏感","直觉精准"],
+    core:`你是数字2——月亮的能量。情感细腻，直觉灵敏，天生能感知他人的需求与情绪。<br><br>你是团队中最不可或缺的粘合剂。不是最显眼的那个，却往往是最被需要的那个。<strong>你的力量不在于锋芒，而在于深度。</strong>`,
+    gift:"沟通与倾听能力出类拔萃，能让对方感到真正被理解。你是天生的调解者，在冲突中能找到双方都能接受的出口。",
+    shadow:"你最大的挑战是对他人认可的依赖。当外界反馈不佳时，你的内心会比别人震荡更大。优柔寡断也是你的课题。",
+    relation:`你在关系中是最用心、最细腻的那一个。<br><br>但要注意：<strong>过度付出而不表达需求，最终会积累成无声的委屈。</strong>你值得被同样细腻地对待——让对方知道你也有需要，不是负担，而是真正亲密的开始。`,
+    career:"心理咨询、人力资源、外交、设计、教育、医疗护理——任何需要细腻感知与沟通协调的领域，你都能做到极致。",
+    wealth:"你的财富往往通过合作与关系网络而来，而非单打独斗。与他人建立真诚的连接，是你最大的隐性资产。",
+    cb:["4","8","6"],cg:["1","3"],
+    advice:[{t:"建立内在稳定感",b:"你的安全感不该来自他人的态度。每天给自己五分钟，问：今天我为自己做了什么？"},{t:"学会说「不」",b:"你的边界是对自己的尊重，也是对关系的保护。拒绝不会让你失去爱，反而让人更珍视你。"},{t:"练习独立做决定",b:"哪怕是小事，都主动决定而不是问别人。这会积累真实的自我信心。"},{t:"表达你的需求",b:"你擅长满足他人，但常常忘记告诉别人你需要什么。说出来，不是脆弱，是真正的连接。"}],
+    quote:"真正的力量，是在感受一切的同时，依然站稳自己。"},
+  3:{name:"创意·表达",kw:"创造 / 社交 / 木星",tags:["创意无限","口才出众","社交达人","艺术天赋"],
+    core:`你是数字3——木星的能量。充满创意与表达欲，思维跳跃，语言有感染力。你不只是在表达，你是在<strong>创造体验</strong>——让别人因为你的存在而感到更生动。`,
+    gift:"创造力丰富、口才出众、社交能量强。你能在短时间内与陌生人建立连接，把复杂的想法用生动有趣的方式传递出去。",
+    shadow:"三分钟热度和注意力分散是你的老朋友。你开始的项目比完成的多三倍。情绪化时容易言过其实，事后懊悔。",
+    relation:`你让关系充满趣味与惊喜。但深度关系需要稳定与耐心——这正是你需要刻意培养的。<br><br><strong>你最适合与同样有创意、但比你更有执行力的人相处。</strong>`,
+    career:"艺术创作、传媒、写作、公关、营销、教育、演讲——任何让你表达自我、感染他人的舞台都是你的主场。",
+    wealth:"你的财富与创意和人脉密切相关。当你把创意专注到一个方向并坚持输出时，财富会随之而来。",
+    cb:["1","5","9"],cg:["2","6"],
+    advice:[{t:"选定一个核心方向，深耕六个月",b:"在某个创意领域坚持输出六个月再判断。你会发现深度带来的成就感远超广度。"},{t:"把想法写下来，而不只是说出来",b:"你有无数好主意，但大多停留在谈话里。每天记录想法，标记哪个值得行动。"},{t:"情绪来了，先暂停24小时",b:"在情绪高峰时说出的话，有时会留下不必要的伤痕。给自己一个缓冲。"},{t:"建立最小可行的日常结构",b:"固定一个创作时段，哪怕只是一小时，都能让你的产出翻倍。"}],
+    quote:"你的创意是礼物，落地才是奇迹。"},
+  4:{name:"稳定·实干",kw:"秩序 / 安全 / 土星",tags:["执行力超强","踏实可靠","有条不紊","中流砥柱"],
+    core:`你是数字4——土星的能量。稳定、秩序、踏实是你的核心基因。你是把梦想变成现实的那个人。<br><br><strong>团队里有你，大家才真正踏实。</strong>你不是最耀眼的那颗星，但你是让整个系统运转的那根轴。`,
+    gift:"执行力强，计划性出色，能把复杂的目标拆解为可操作的步骤。你是天生的项目管理者，擅长在混乱中建立秩序。",
+    shadow:"过于保守是你最大的限制。当变化来临，你的第一反应是抗拒而非适应。对安全感的需求有时让你错失真正的机遇。",
+    relation:`你在关系中忠诚、可靠、稳定，是对方最坚实的后盾。但有时你的实际主义会让关系缺少浪漫与惊喜。<br><br><strong>试着偶尔打破自己的计划，给生活留一点即兴的空间。</strong>`,
+    career:"工程、建筑、金融、法律、项目管理、制造业——需要精准、严谨、长期执行的领域，你天生在行。",
+    wealth:"你的财富来自稳定积累，而非一夜暴富。长期投资、踏实经营是你的财富路径。",
+    cb:["2","6","8"],cg:["1","7"],
+    advice:[{t:"每月主动拥抱一次变化",b:"哪怕是换一条上班路线、尝试一道没吃过的菜。小小的主动改变，能逐渐软化对变化的恐惧。"},{t:"区分「谨慎」和「恐惧」",b:"谨慎是评估风险后的选择；恐惧是还没评估就先拒绝。先问：我是在分析，还是在逃避？"},{t:"多表达情感，不只是行动",b:"你的爱是默默去做事，但伴侣和朋友有时需要的是听你说出来。"},{t:"相信过程中的混乱是正常的",b:"当计划失控时，不是失败的信号，而是调整的契机。"}],
+    quote:"大厦之稳，来自你这样的人。"},
+  5:{name:"自由·冒险",kw:"变化 / 感官 / 水星",tags:["适应力极强","热爱自由","思维灵活","天生销售"],
+    core:`你是数字5——水星的能量。自由、变化与感官体验是你的命脉。你渴望体验生命的每一种可能性。<br><br><strong>你的世界里没有"不可能"，只有"还没试过"。</strong>`,
+    gift:"适应能力极强，能在任何环境快速找到自己的节奏。思维灵活，天生的销售与谈判高手。",
+    shadow:"厌倦是你的宿敌。当新鲜感消退，你就开始坐立不安，寻找下一个刺激。对承诺的恐惧，让你有时错失真正深度的关系和事业。",
+    relation:`你的魅力让人着迷，初期的关系总是充满火花。但当关系进入稳定期，你开始感到"困住了"。<br><br><strong>真正的自由，不是不承诺，而是在承诺之内依然感到自由。</strong>`,
+    career:"销售、旅游、媒体、公关、创业、自由职业——需要灵活适应的领域是你的乐园。朝九晚五、重复单一的工作会让你窒息。",
+    wealth:"你的财富机会多、来得快，但也可能去得快。要建立一个稳定的财务底盘——把每次的收益留出一部分作为储备。",
+    cb:["1","3","7"],cg:["5","9"],
+    advice:[{t:"在核心领域建立「自由边界」",b:"给自己设定一个不变的核心，其余保持灵活。根基越稳，你飞得越远。"},{t:"允许自己慢下来，体验深度",b:"你习惯了广度，但深度体验会给你意想不到的满足感。"},{t:"把「厌倦」当作信号，而不是行动指令",b:"先问自己：是这件事真的没价值了，还是我只是需要换一个角度？"},{t:"建立简单的财务规则并坚守",b:"每月固定储蓄一个比例。这不是束缚，是让你的冒险更有底气的安全网。"}],
+    quote:"真正的冒险者，知道何时该停下来，扎根生长。"},
+  6:{name:"责任·爱",kw:"关怀 / 家庭 / 金星",tags:["同理心超强","天生守护者","责任感深厚","创造和谐"],
+    core:`你是数字6——金星的能量。爱、责任与关怀是你的核心驱动力。你真心觉得照顾好身边的人是自己的使命。<br><br><strong>你是那个让别人感到安全的人。</strong>你的存在本身，就是一种温暖的力量。`,
+    gift:"极强的同理心，能真正感受到他人的痛苦与需要。善于创造和谐的环境，化解冲突，让团队或家庭凝聚在一起。",
+    shadow:"过度付出是你最深的陷阱。你给予，给予，再给予，却忘了自己也有需要。当付出得不到对等的回应，你慢慢积累成深层的委屈与疲惫。",
+    relation:`你在关系中是最温柔的守护者。但你把太多的自我价值绑定在"被需要"上。<br><br>真正的爱，是让对方自由生长，同时自己也持续成长。`,
+    career:"医疗、心理咨询、教育、社会工作、设计——任何滋养生命、创造美与和谐的领域，你都能做到极致。",
+    wealth:"你太容易把金钱用于照顾他人，而忽视了自己的财务安全。建立\"先照顾自己\"的财务意识。",
+    cb:["2","4","9"],cg:["3","6"],
+    advice:[{t:"把「照顾自己」列为每日首要任务",b:"在照顾他人之前，先问自己：我今天吃好了吗？睡够了吗？"},{t:"设立清晰的边界，温柔地坚守",b:"说\"我现在没办法帮这个\"不是冷漠，而是诚实。"},{t:"接受他人的照顾，让自己被接住",b:"当有人想为你做些什么，允许自己接受。被照顾，也是一种练习。"},{t:"区分「关心」和「控制」",b:"出于爱的过度介入，有时会变成对方的压力。信任他人有能力照顾自己的人生。"}],
+    quote:"你给世界的温柔，同样值得被温柔以待。"},
+  7:{name:"智慧·探索",kw:"内省 / 灵性 / 海王星",tags:["洞察力深邃","哲学思考者","直觉精准","独立内省"],
+    core:`你是数字7——海王星的能量。深邃、内省、对真相有强烈的渴求。你不满足于表面的答案，你要追问到最底层的本质。<br><br><strong>你的内心世界，比外在世界更广阔、更丰富。</strong>`,
+    gift:"分析力强，思维深刻，有天生的直觉洞察力。你能在数据、现象或对话中发现常人忽视的规律与真相。",
+    shadow:"过于封闭是你最深的限制。你不轻易信任，不轻易开口，这保护了你，却也把真正亲密的可能性隔在了门外。",
+    relation:`你的内心世界极为丰富，但你给他人看到的，往往只是冰山一角。<br><br><strong>真正的亲密，需要你愿意打开那扇内心的门。</strong>试着让一个你信任的人，真正走进来。`,
+    career:"研究、数据分析、心理、哲学、技术、写作——任何需要深度思考与洞察的领域，你能走到别人到不了的深处。",
+    wealth:"你对金钱的态度较为超脱。建立一个简单而自动化的财务系统，让钱的事情少占用你宝贵的心智资源。",
+    cb:["1","5","4"],cg:["2","7"],
+    advice:[{t:"主动分享你的内心，哪怕只是一小部分",b:"每周找一个你信任的人，分享一个你的真实想法——不是结论，而是感受和困惑。"},{t:"走出思考，进入行动",b:"你能把一个问题想透彻，但想透彻不等于解决了它。今天就做第一步。"},{t:"建立信任，需要时间，但值得",b:"用怀疑的滤镜看所有人，会让你错过真正值得的连接。"},{t:"照顾你的身体",b:"你的头脑在高速运转时，身体在默默透支。规律的运动和睡眠，是你最好的系统维护。"}],
+    quote:"你所探索的深处，正是世界最需要光的地方。"},
+  8:{name:"权力·财富",kw:"成就 / 物质 / 土星",tags:["领导力极强","商业嗅觉敏锐","掌控全局","成就驱动"],
+    core:`你是数字8——土星最强的表达。权力、财富与成就是你的主旋律。你天生懂得驾驭资源，看清结构，在任何系统中都能找到杠杆点。<br><br><strong>你内心深处知道，自己可以做成一些别人认为很难的事。</strong>而你通常是对的。`,
+    gift:"领导能力与商业嗅觉天然。你能看清一件事的本质结构，找到最有效的切入点。在资源调配、战略决策方面，你往往比别人快半步。",
+    shadow:"控制欲是你最大的阴影面。你对\"事情必须按正确方式运行\"有强烈的执念，这容易让你在关系和团队中变得强势甚至专制。",
+    relation:`你在关系中是强有力的保护者和提供者，给伴侣安全感和稳定。但你的主导欲有时让亲密的人感到喘不过气。<br><br><strong>你最需要学习的，是放手。</strong>不是放弃，而是相信身边的人有能力照顾好自己。`,
+    career:"商业、金融、管理、投资、战略咨询、房地产——任何需要驾驭大局与资源、追求成果的舞台，都是你施展的地方。",
+    wealth:`8号人的财富往往经历明显的起伏——<strong>大起大落</strong>是你的人生结构。每一次低谷背后通常藏着更大的反弹，关键是在低谷时不因焦虑做出冲动决策。`,
+    cb:["2","4","6"],cg:["1","8"],
+    advice:[{t:"把成功的定义扩展到物质之外",b:"关系的质量、内心的平静、身体的健康——这些同样是你值得投入的\"财富\"。"},{t:"练习放权，这是另一种掌控",b:"有意识地把某些决定权交给身边的人。这不是失控，而是更聪明的能量分配。"},{t:"表达你内心的柔软",b:"你的外壳让人以为你刀枪不入。但你也有疲惫、困惑和不确定。在最信任的关系里，说出来。"},{t:"把身体管理当成重要事项",b:"8号人高强度运转，容易把身体信号当作小问题忽视。把\"维护自己\"当成管理重要资产来对待。"}],
+    quote:"真正的强大，不是握紧一切，而是有能力放开，然后一切仍在。"},
+  9:{name:"圆满·智慧",kw:"博爱 / 完成 / 宇宙",tags:["综合能力出众","格局广阔","感染力强","天生引路人"],
+    core:`你是数字9——所有数字的集大成者，1到8的智慧都在你身上留下了印记。你拥有广阔的格局与深厚的悲悯，能理解各种不同的人。<br><br><strong>你是天生的智者与引路人。</strong>身边的人常常在不知不觉中被你影响、被你启发。`,
+    gift:"综合能力极强，情商出众，适应不同场合与人群。你有天然的感召力，在任何领域都能快速上手，广受人喜爱与信任。",
+    shadow:"贪多嚼不烂，样样通样样松。因为什么都能做、什么都感兴趣，你反而难以聚焦。目标不清晰、难以完成是你的老问题。",
+    relation:`你对人有天然的感召力与温暖，但你的博爱特质有时让亲密关系中的人感到：<strong>你谁都爱，却没有人是你最特别的。</strong><br><br>深度经营几段关系，比广泛连接更能滋养你和对方。`,
+    career:"教育、公益、艺术、灵性领域、领导力培训——任何需要引领与启发他人的领域，你都是最合适的人选。",
+    wealth:"你对财富的态度往往超脱，但这也可能让你在物质层面缺乏规划。记住：先把自己照顾好，才能真正照顾别人。",
+    cb:["3","6","9"],cg:["1","2"],
+    advice:[{t:"选定一个核心使命，深耕到底",b:"你什么都能做，但你的生命力量在\"专一\"中才能真正释放。"},{t:"学会完成，而不只是开始",b:"完成一件事，比开始十件事更有力量。给每个项目设定明确的截止点。"},{t:"把博爱化为具体的、持续的行动",b:"选一个你真正关心的议题，长期投入，而不是泛泛地什么都关心。"},{t:"深耕几段核心关系",b:"选择几个你最在乎的人，给他们更多真实的自己。"}],
+    quote:"你的使命，是把你走过的路，变成他人前行的光。"}
+};
+
+// ═══════════════════════════════════════════════
+// 4. 九宫格连线定义
+// ═══════════════════════════════════════════════
+const LINES = [
+  {id:"L147",nums:[1,4,7],name:"学习线",type:"horizontal",
+    has:{label:"学习线完整",power:"记忆力强，逻辑清晰，财富意识稳健。有此连线者善于系统性学习，能把知识转化为实际能力，与财运及事业积累密切相关。"},
+    miss:{label:"学习线缺失",note:"学习与记忆可能需要更多刻意练习。建议建立固定的学习习惯，用外部结构弥补内在驱动的不足。"}},
+  {id:"L258",nums:[2,5,8],name:"情感线",type:"horizontal",
+    has:{label:"情感线完整",power:"情感智慧出众，直觉力强。有此连线者人际关系处理能力突出，能感知他人需求，在需要情商的场合如鱼得水。"},
+    miss:{label:"情感线缺失",note:"人际关系可能需要更多有意识的经营。建议主动练习共情与表达，不要让逻辑盖过感受。"}},
+  {id:"L369",nums:[3,6,9],name:"思维线",type:"horizontal",
+    has:{label:"思维线完整",power:"思维活跃，创意丰富，想象力超群。有此连线者擅长教育、艺术与创作，能把抽象的想法变成感人的表达。"},
+    miss:{label:"思维线缺失",note:"创意表达可能需要更多练习。建议通过写作、绘画或任何创意活动，开发内在的表达潜能。"}},
+  {id:"L123",nums:[1,2,3],name:"行动线",type:"vertical",
+    has:{label:"行动线完整",power:"执行力强，敢于开拓，行动果断。有此连线者不只是说，而是真的去做，能在短时间内把想法变成现实。"},
+    miss:{label:"行动线缺失",note:"从想法到行动可能有阻力。建议用\"最小行动原则\"——把目标拆解到最小的第一步，让启动更容易。"}},
+  {id:"L456",nums:[4,5,6],name:"意志线",type:"vertical",
+    has:{label:"意志线完整",power:"意志力坚韧，逆境中稳如磐石。有此连线者拥有持续前行的内在驱动力，不轻易被挫折打倒，是长跑型的成功者。"},
+    miss:{label:"意志线缺失",note:"持续坚持可能是挑战。建议寻找一个核心价值观作为锚点——当外在动力不足时，让内在信念撑着你走。"}},
+  {id:"L789",nums:[7,8,9],name:"实践线",type:"vertical",
+    has:{label:"实践线完整",power:"务实高效，能将理想落地。有此连线者不只会想，还能做到——善于把宏大的愿景拆解为可执行的步骤，结果导向。"},
+    miss:{label:"实践线缺失",note:"将想法落地可能需要更多支持。建议找一个执行力强的伙伴合作，或者专门练习\"完成一件小事\"的习惯。"}},
+  {id:"L159",nums:[1,5,9],name:"中心线",type:"diagonal",
+    has:{label:"中心线完整",power:"核心能量强大，自我与使命高度统一。有此连线者内在力量充沛，人生目标清晰，能把个人意志与更大的使命感融为一体。"},
+    miss:{label:"中心线缺失",note:"个人意志与人生使命的连接可能需要刻意建立。建议定期静下来问：我真正想要的是什么？这件事对更大的意义是什么？"}},
+  {id:"L357",nums:[3,5,7],name:"智慧表达线",type:"diagonal",
+    has:{label:"智慧表达线完整",power:"洞察力与表达力并驾齐驱，是天生的老师、演讲者与作家。有此连线者能把深刻的洞见用感染力强的方式传递出去，极具说服力。"},
+    miss:{label:"智慧表达线缺失",note:"将内在洞察转化为有力表达可能需要练习。建议从写日记或分享开始，逐步建立把思想外化的能力。"}}
+];
+
+// ═══════════════════════════════════════════════
+// 5. 计算与渲染
+// ═══════════════════════════════════════════════
 function reduce(n){while(n>9){n=String(n).split('').reduce((a,b)=>a+parseInt(b),0);}return n;}
 function go(n){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('s'+n).classList.add('active');window.scrollTo(0,0);}
+
 function calculate(){
   const y=parseInt(document.getElementById('year').value)||0;
   const m=parseInt(document.getElementById('month').value)||0;
@@ -304,71 +497,192 @@ function calculate(){
   const digits=`${y}${m}${d}`.split('').map(Number);
   const tianfu=digits.reduce((a,b)=>a+b,0);
   const shengming=reduce(tianfu);
-  renderResult(name,y,m,d,tianfu,shengming);
+  renderResult(name,y,m,d,tianfu,shengming,digits);
   go(2);
 }
-function renderResult(name,y,m,d,tianfu,shengming){
-  const info=D[shengming];
+
+function renderResult(name,y,m,d,tianfu,shengming,allDigits){
+  const info=LIFE[shengming];
   const dn=name||(y+'年'+m+'月'+d+'日');
-  const cb=info.cb.map(n=>`<span class="compat-best">数字${n}·${D[n].name.split('·')[0]}</span>`).join('');
-  const cg=info.cg.map(n=>`<span class="compat-good">数字${n}·${D[n].name.split('·')[0]}</span>`).join('');
-  const adv=info.advice.map((a,i)=>`<li><span class="advice-num">${['Ⅰ','Ⅱ','Ⅲ','Ⅳ'][i]}</span><span class="advice-body"><strong>${a.t}</strong><span>${a.b}</span></span></li>`).join('');
+
+  // ── 天赋数拆分 ──
+  const tfStr=String(tianfu).padStart(2,'0');
+  const d1=parseInt(tfStr[0]),d2=parseInt(tfStr[1])||0;
+  const comboKey=String(tianfu);
+  const combo=COMBO[comboKey]||COMBO[String(d1)+String(d2)]||null;
+
+  // ── 九宫格：统计生日原始数字出现次数 ──
+  const bdDigits=`${y}${m}${d}`.split('').map(Number).filter(x=>x>0);
+  const counts={};
+  for(let i=1;i<=9;i++)counts[i]=0;
+  bdDigits.forEach(x=>{if(x>=1&&x<=9)counts[x]++;});
+
+  // ── 连线分析 ──
+  const lineResults=LINES.map(line=>{
+    const has=line.nums.every(n=>counts[n]>0);
+    return{...line,has};
+  });
+  const hasLines=lineResults.filter(l=>l.has);
+  const missLines=lineResults.filter(l=>!l.has);
+
+  // 缺失数字
+  const missingNums=[];
+  for(let i=1;i<=9;i++){if(counts[i]===0)missingNums.push(i);}
+
+  // ── HTML构建 ──
+  const cb=info.cb.map(n=>`<span class="compat-best">数字${n}·${LIFE[n].name.split('·')[0]}</span>`).join('');
+  const cg=info.cg.map(n=>`<span class="compat-good">数字${n}·${LIFE[n].name.split('·')[0]}</span>`).join('');
+  const adv=info.advice.map((a,i)=>`<li><span class="adv-num">${['Ⅰ','Ⅱ','Ⅲ','Ⅳ'][i]}</span><span class="adv-body"><strong>${a.t}</strong><span>${a.b}</span></span></li>`).join('');
+
+  // 九宫格HTML（按 3 6 9 / 2 5 8 / 1 4 7 排列）
+  const gridOrder=[3,6,9,2,5,8,1,4,7];
+  const pcHtml=gridOrder.map(n=>{
+    const c=counts[n];
+    const isActive=c>0;
+    const dots='●'.repeat(Math.min(c,4));
+    return`<div class="pc${isActive?' active':''}">
+      <span class="pc-pos">${n}</span>
+      <span class="pc-dots">${dots}</span>
+      ${c>1?`<span class="pc-count">×${c}</span>`:''}
+    </div>`;
+  }).join('');
+
+  // 连线HTML
+  const lineHtml=lineResults.map(l=>`
+    <div class="line-item">
+      <div class="line-header">
+        <span class="line-badge ${l.has?'line-has':'line-missing'}">${l.has?l.has.label:l.miss.label}</span>
+        <span class="line-name">${l.name}（${l.nums.join('-')}）</span>
+      </div>
+      ${l.has
+        ?`<div class="line-desc">${l.has.power}</div>`
+        :`<div class="line-power">${l.miss.note}</div>`}
+    </div>`).join('');
+
+  // 缺失数字HTML
+  const missingHtml=missingNums.length>0?`
+    <div class="missing-note">
+      <div class="missing-note-title">✦ 生日中缺失的数字：${missingNums.join('、')}</div>
+      <div class="missing-note-text">${missingNums.map(n=>`<strong>${n}（${NUM[n].name}）</strong>：${NUM[n].energy}——这是你需要通过后天学习和刻意练习来补充的能量。`).join('<br>')}</div>
+    </div>`:'<div class="missing-note"><div class="missing-note-title">✦ 你的生日包含了多个数字，能量较为完整</div><div class="missing-note-text">你的生命数字覆盖面广，各方面能量相对均衡，成长重点在于深化而非补缺。</div></div>';
+
+  // 天赋数各位解读
+  const d1info=NUM[d1]||NUM[1];
+  const d2info=d2?NUM[d2]:null;
+
   document.getElementById('rc').innerHTML=`
-  <div class="result-hero">
-    <div class="result-name">${dn} 的生命密码</div>
-    <div class="num-showcase">
-      <div class="num-bubble"><div class="num-big" style="font-size:26px">${tianfu}</div><div class="num-tag">天赋数</div></div>
-      <div class="arrow-div">›</div>
-      <div class="num-bubble main"><div class="num-big">${shengming}</div><div class="num-tag">生命数</div></div>
+  <div class="r-hero">
+    <div class="r-name">${dn} 的生命密码</div>
+    <div class="num-row">
+      <div class="nb"><div class="nb-n" style="font-size:24px">${tianfu}</div><div class="nb-t">天赋数</div></div>
+      <div class="arr">›</div>
+      <div class="nb main"><div class="nb-n">${shengming}</div><div class="nb-t">生命数</div></div>
     </div>
-    <div class="result-title">${info.name}</div>
-    <div class="result-keyword">${info.keyword}</div>
+    <div class="r-title">${info.name}</div>
+    <div class="r-kw">${info.kw}</div>
   </div>
-  <div class="tags-row">${info.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-  <div class="card"><div class="card-title">✦ 你是谁 · 核心能量</div><div class="card-text">${info.core}</div></div>
-  <div class="dual-card">
-    <div class="dual-card-title">✦ 天赋优势 与 人生课题</div>
-    <div class="dual-cols">
-      <div><div class="dual-col-label">▲ 天赋与优势</div><div class="dual-col-text">${info.gift}</div></div>
-      <div><div class="dual-col-label">▽ 挑战与阴影</div><div class="dual-col-text">${info.shadow}</div></div>
+
+  <div class="tags">${info.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+
+  <!-- ① 原生天赋DNA分析 -->
+  <div class="dna-card">
+    <div class="dna-title">✦ 原生天赋 DNA · 你独有的能量结构</div>
+    <div class="dna-formula">
+      ${d2info?`
+      <div class="dna-chip"><div class="dna-chip-n">${d1}</div><div class="dna-chip-t">${d1info.name}</div></div>
+      <span class="dna-plus">+</span>
+      <div class="dna-chip"><div class="dna-chip-n">${d2}</div><div class="dna-chip-t">${d2info.name}</div></div>
+      <span class="dna-eq">=</span>`:''}
+      <div class="dna-chip big"><div class="dna-chip-n">${shengming}</div><div class="dna-chip-t">生命数</div></div>
+    </div>
+    <div class="dna-row">
+      <div class="dna-num-label"><span class="dna-num-badge">${d1}</span> 数字${d1}·${d1info.name}的能量</div>
+      <div class="dna-text"><strong>天赋：</strong>${d1info.gift}<br><strong>挑战：</strong>${d1info.shadow}</div>
+    </div>
+    ${d2info?`
+    <div class="dna-row">
+      <div class="dna-num-label"><span class="dna-num-badge">${d2}</span> 数字${d2}·${d2info.name}的能量</div>
+      <div class="dna-text"><strong>天赋：</strong>${d2info.gift}<br><strong>挑战：</strong>${d2info.shadow}</div>
+    </div>`:''}
+    ${combo?`
+    <div class="dna-combo-box">
+      <div class="dna-combo-title">✦ ${combo.title}</div>
+      <div class="dna-combo-text">${combo.text}</div>
+      <div style="margin-top:6px;font-size:11px;color:rgba(201,168,76,.5)">关键词：${combo.key}</div>
+    </div>`:''}
+  </div>
+
+  <!-- ② 核心能量 -->
+  <div class="card"><div class="ct">✦ 生命数${shengming} · 核心能量解读</div><div class="cb">${info.core}</div></div>
+
+  <!-- ③ 天赋与阴影 -->
+  <div class="dc">
+    <div class="dct">✦ 天赋优势 与 人生课题</div>
+    <div class="dcols">
+      <div><div class="dcl">▲ 天赋与优势</div><div class="dct2">${info.gift}</div></div>
+      <div><div class="dcl">▽ 挑战与阴影</div><div class="dct2">${info.shadow}</div></div>
     </div>
   </div>
+
+  <!-- ④ 九宫格连线分析 -->
+  <div class="grid-card">
+    <div class="grid-title">✦ 九宫格连线分析 · 你的生日能量地图</div>
+    <div class="grid-layout">
+      <div>
+        <div class="palace">${pcHtml}</div>
+        <div style="margin-top:8px;font-size:11px;color:rgba(201,168,76,.4);line-height:1.6">
+          ● = 生日中出现的数字<br>×2/×3 = 出现次数（能量加倍）
+        </div>
+      </div>
+      <div class="grid-lines">${lineHtml}</div>
+    </div>
+    ${missingHtml}
+  </div>
+
+  <!-- ⑤ 人际关系 -->
   <div class="card">
-    <div class="card-title">✦ 人际关系模式</div>
-    <div class="card-text">${info.relation}</div>
+    <div class="ct">✦ 人际关系模式</div>
+    <div class="cb">${info.relation}</div>
     <div class="compat-label">最佳契合数字</div><div class="compat-row">${cb}</div>
     <div class="compat-label">良好相处数字</div><div class="compat-row">${cg}</div>
   </div>
-  <div class="dual-card">
-    <div class="dual-card-title">✦ 事业方向 与 财富密码</div>
-    <div class="dual-cols">
-      <div><div class="dual-col-label">事业方向</div><div class="dual-col-text">${info.career}</div></div>
-      <div><div class="dual-col-label">财富模式</div><div class="dual-col-text">${info.wealth}</div></div>
+
+  <!-- ⑥ 事业财富 -->
+  <div class="dc">
+    <div class="dct">✦ 事业方向 与 财富密码</div>
+    <div class="dcols">
+      <div><div class="dcl">事业方向</div><div class="dct2">${info.career}</div></div>
+      <div><div class="dcl">财富模式</div><div class="dct2">${info.wealth}</div></div>
     </div>
   </div>
-  <div class="section-label">— 给你的四条生命建议 —</div>
-  <div class="card"><ul class="advice-list">${adv}</ul></div>
-  <div class="section-label">— 分享你的命运数字 —</div>
+
+  <!-- ⑦ 建议 -->
+  <div class="sec-label">— 给你的四条生命建议 —</div>
+  <div class="card"><ul class="adv-list">${adv}</ul></div>
+
+  <!-- ⑧ 分享卡 -->
+  <div class="sec-label">— 分享你的命运数字 —</div>
   <div class="share-card">
     <div class="sc tl"></div><div class="sc tr"></div><div class="sc bl"></div><div class="sc br"></div>
-    <div class="share-app">生命数字密码 · NUMEROLOGY</div>
-    <div class="share-n">${shengming}</div>
-    <div class="share-nl">LIFE NUMBER</div>
-    <div class="share-name">${info.name}</div>
-    <div class="share-kw">${info.keyword}</div>
+    <div class="sapp">生命数字密码 · NUMEROLOGY</div>
+    <div class="snum">${shengming}</div>
+    <div class="snl">LIFE NUMBER</div>
+    <div class="sname">${info.name}</div>
+    <div class="skw">${info.kw}</div>
     <div class="sdiv"></div>
-    <div class="share-bubbles">
+    <div class="sbubs">
       <div class="sb"><div class="sb-n">${tianfu}</div><div class="sb-t">天赋数</div></div>
       <div class="sb"><div class="sb-n">${shengming}</div><div class="sb-t">生命数</div></div>
       <div class="sb"><div class="sb-n">${m}/${d}</div><div class="sb-t">生日</div></div>
     </div>
     <div class="sdiv"></div>
-    <div class="share-quote">"${info.quote}"</div>
-    <div class="share-footer">✦ 测一测你的生命数字 ✦</div>
+    <div class="squote">"${info.quote}"</div>
+    <div class="sfooter">✦ 测一测你的生命数字 ✦</div>
   </div>
   <button class="btn-share" onclick="showToast('长按海报截图，发送朋友圈 ✨')">截图保存，分享朋友圈 ✦</button>
   <button class="btn-again" onclick="go(1)">为朋友再测一次</button>`;
 }
+
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
 </script>
 </body>
